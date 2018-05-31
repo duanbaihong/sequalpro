@@ -25,7 +25,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Advanced Filter" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="SPTableFilterPanel" animationBehavior="default" id="nzu-CY-UY7" userLabel="Advanced Filter Table Window" customClass="NSPanel">
+        <window title="高级过滤" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="SPTableFilterPanel" animationBehavior="default" id="nzu-CY-UY7" userLabel="Advanced Filter Table Window" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" nonactivatingPanel="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="162" y="162" width="752" height="317"/>
@@ -123,7 +123,7 @@
                                     <button toolTip="Perform filtering by using SELECT DISTINCT" id="kkn-vg-a1j">
                                         <rect key="frame" x="537" y="57" width="197" height="18"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="check" title="Select distinct" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="n3P-Lk-0tv">
+                                        <buttonCell key="cell" type="check" title="Select 去重" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="n3P-Lk-0tv">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="smallSystem"/>
                                             <string key="keyEquivalent">d</string>
@@ -170,7 +170,7 @@
                                     <textField verticalHuggingPriority="750" id="WnE-kO-RxG">
                                         <rect key="frame" x="17" y="115" width="294" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WHERE query" id="iRJ-gQ-rJy">
+                                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="WHERE 查询" id="iRJ-gQ-rJy">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -260,7 +260,7 @@
             <point key="canvasLocation" x="146" y="493"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="E5e-Af-qLe"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="bXg-MQ-c5g" userLabel="Filter Table Set Default Operator Sheet" customClass="NSPanel">
+        <window title="窗口" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="bXg-MQ-c5g" userLabel="Filter Table Set Default Operator Sheet" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="235" y="418" width="251" height="102"/>
@@ -274,9 +274,9 @@
                     <button verticalHuggingPriority="750" tag="1" id="dzK-Nw-kVd">
                         <rect key="frame" x="140" y="13" width="96" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lvs-yx-6iE">
+                        <buttonCell key="cell" type="push" title="保存" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lvs-yx-6iE">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" size="11" name=".PingFangSC-Regular"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
@@ -288,9 +288,9 @@ DQ
                     <button verticalHuggingPriority="750" id="eKg-Fu-UA7">
                         <rect key="frame" x="46" y="13" width="96" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
-                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FJo-lE-2oi">
+                        <buttonCell key="cell" type="push" title="取消" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FJo-lE-2oi">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="smallSystem"/>
+                            <font key="font" size="11" name=".PingFangSC-Regular"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 Gw
 </string>
@@ -302,8 +302,8 @@ Gw
                     <textField verticalHuggingPriority="750" id="iLi-Fh-ovo">
                         <rect key="frame" x="17" y="76" width="208" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Enter Filter Table's Default Operator:" id="Aps-Nn-GvU">
-                            <font key="font" metaFont="smallSystem"/>
+                        <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="输入筛选器表的默认操作符:" id="Aps-Nn-GvU">
+                            <font key="font" size="11" name=".PingFangSC-Regular"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>

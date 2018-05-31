@@ -79,7 +79,7 @@ DQ
                 <outlet property="initialFirstResponder" destination="458" id="501"/>
             </connections>
         </window>
-        <window title="SSH Tunnel Password Query" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" visibleAtLaunch="NO" animationBehavior="default" id="468">
+        <window title="SSH隧道密码查询" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" visibleAtLaunch="NO" animationBehavior="default" id="468">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="301" width="471" height="209"/>

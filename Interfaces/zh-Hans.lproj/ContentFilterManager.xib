@@ -26,7 +26,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Content Filter Manager" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="SPContentFilterManagerWindow" animationBehavior="default" id="1" userLabel="Content Filter Manager">
+        <window title="当前过滤管理" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="SPContentFilterManagerWindow" animationBehavior="default" id="1" userLabel="Content Filter Manager">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="593" y="356" width="500" height="371"/>
@@ -382,13 +382,13 @@ Gw
         <userDefaultsController representsSharedInstance="YES" id="143"/>
         <menu id="205" userLabel="Favorite Context Menu">
             <items>
-                <menuItem title="Remove" id="206">
+                <menuItem title="删除" id="206">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="removeContentFilter:" target="-1" id="329"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Duplicate" id="212">
+                <menuItem title="复制" id="212">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="duplicateContentFilter:" target="-1" id="330"/>

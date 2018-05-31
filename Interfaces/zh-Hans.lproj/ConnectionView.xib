@@ -90,74 +90,74 @@
                                         <menu key="menu" title="OtherViews" id="5826">
                                             <items>
                                                 <menuItem state="on" image="button_action" hidden="YES" id="5833"/>
-                                                <menuItem title="Rename" id="5883">
+                                                <menuItem title="重命令" id="5883">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                     <connections>
                                                         <action selector="renameNode:" target="-2" id="5890"/>
                                                     </connections>
                                                 </menuItem>
-                                                <menuItem title="Remove" id="5884">
+                                                <menuItem title="删除" id="5884">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                     <connections>
                                                         <action selector="removeNode:" target="-2" id="5891"/>
                                                     </connections>
                                                 </menuItem>
                                                 <menuItem isSeparatorItem="YES" id="5885"/>
-                                                <menuItem title="Duplicate" id="5886">
+                                                <menuItem title="复制" id="5886">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                     <connections>
                                                         <action selector="duplicateFavorite:" target="-2" id="5888"/>
                                                     </connections>
                                                 </menuItem>
                                                 <menuItem isSeparatorItem="YES" id="5892"/>
-                                                <menuItem title="Import..." id="5834">
+                                                <menuItem title="导入..." id="5834">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                     <connections>
                                                         <action selector="importFavorites:" target="-2" id="5849"/>
                                                     </connections>
                                                 </menuItem>
-                                                <menuItem title="Export..." id="5835">
+                                                <menuItem title="导出..." id="5835">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                     <connections>
                                                         <action selector="exportFavorites:" target="-2" id="5844"/>
                                                     </connections>
                                                 </menuItem>
                                                 <menuItem isSeparatorItem="YES" id="5836"/>
-                                                <menuItem title="Make Default" id="5887">
+                                                <menuItem title="设置为默认" id="5887">
                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                     <connections>
                                                         <action selector="makeSelectedFavoriteDefault:" target="-2" id="5889"/>
                                                     </connections>
                                                 </menuItem>
-                                                <menuItem title="Sort By" id="5837">
-                                                    <menu key="submenu" title="Sort By" id="5838">
+                                                <menuItem title="排序" id="5837">
+                                                    <menu key="submenu" title="排序" id="5838">
                                                         <items>
-                                                            <menuItem title="Name" id="5843">
+                                                            <menuItem title="名称" id="5843">
                                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                                                 <connections>
                                                                     <action selector="sortFavorites:" target="-2" id="5846"/>
                                                                 </connections>
                                                             </menuItem>
-                                                            <menuItem title="Host" id="5842">
+                                                            <menuItem title="主机" id="5842">
                                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                                                 <connections>
                                                                     <action selector="sortFavorites:" target="-2" id="5847"/>
                                                                 </connections>
                                                             </menuItem>
-                                                            <menuItem title="Type" id="5841">
+                                                            <menuItem title="类型" id="5841">
                                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                                                 <connections>
                                                                     <action selector="sortFavorites:" target="-2" id="5845"/>
                                                                 </connections>
                                                             </menuItem>
-                                                            <menuItem title="Color" id="25V-E5-s4p">
+                                                            <menuItem title="颜色" id="25V-E5-s4p">
                                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                                                 <connections>
                                                                     <action selector="sortFavorites:" target="-2" id="Q9D-q1-jts"/>
                                                                 </connections>
                                                             </menuItem>
                                                             <menuItem isSeparatorItem="YES" id="5840"/>
-                                                            <menuItem title="Reverse Sort Order" id="5839">
+                                                            <menuItem title="反转排序" id="5839">
                                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                                                 <connections>
                                                                     <action selector="reverseSortFavorites:" target="-2" id="5848"/>
@@ -1610,7 +1610,7 @@ DQ
             </subviews>
             <point key="canvasLocation" x="132" y="496.5"/>
         </customView>
-        <window title="Error Detail" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="5431" userLabel="Error Detail HUD" customClass="NSPanel">
+        <window title="错误信息" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="5431" userLabel="Error Detail HUD" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES" HUD="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="439" y="291" width="580" height="320"/>
@@ -1625,7 +1625,7 @@ DQ
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="1Qd-RL-aJ4">
                             <rect key="frame" x="0.0" y="0.0" width="578" height="293"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" drawsBackground="NO" importsGraphics="NO" verticallyResizable="NO" id="5434">
                                     <rect key="frame" x="0.0" y="0.0" width="578" height="293"/>
@@ -3504,8 +3504,8 @@ DQ
                 <textField verticalHuggingPriority="750" id="5669">
                     <rect key="frame" x="2" y="42" width="575" height="17"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="Please select the SSL key file to use when establishing a secure connection." id="5670">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="请在创建安全连接时选择要使用的SSL密钥文件。" id="5670">
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -3513,9 +3513,9 @@ DQ
                 <button id="5756">
                     <rect key="frame" x="14" y="14" width="273" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <buttonCell key="cell" type="check" title="Show hidden files" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="5757">
+                    <buttonCell key="cell" type="check" title="显示隐藏文件" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="5757">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
                     </buttonCell>
                     <connections>
                         <action selector="updateKeyLocationFileVisibility:" target="-2" id="5759"/>
@@ -3643,8 +3643,8 @@ DQ
                 <textField verticalHuggingPriority="750" id="5797">
                     <rect key="frame" x="-3" y="12" width="371" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="For security reasons, your connection favorite passwords are not included in the export." id="5798">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="出于安全原因，您的收藏连接的密码不包含在导出中." id="5798">
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>

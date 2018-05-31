@@ -62,8 +62,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="395" height="233"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="14" horizontalPageScroll="10" verticalLineScroll="14" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="150">
-                                        <rect key="frame" x="0.0" y="0.0" width="396" height="233"/>
+                                    <scrollView focusRingType="none" misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="14" horizontalPageScroll="10" verticalLineScroll="14" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="150">
+                                        <rect key="frame" x="7" y="0.0" width="396" height="233"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <clipView key="contentView" drawsBackground="NO" id="YTv-7h-hUD">
                                             <rect key="frame" x="1" y="0.0" width="394" height="232"/>
@@ -206,9 +206,9 @@
                     <button toolTip="Synchronize connection window selection with Navigator (⌥⌘S)" verticalHuggingPriority="750" id="108">
                         <rect key="frame" x="252" y="337" width="95" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="recessed" title="sync" bezelStyle="recessed" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="109">
+                        <buttonCell key="cell" type="recessed" title="同步" bezelStyle="recessed" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="109">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                            <font key="font" metaFont="systemBold" size="12"/>
+                            <font key="font" size="12" name=".PingFangSC-Medium"/>
                             <string key="keyEquivalent">s</string>
                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                         </buttonCell>

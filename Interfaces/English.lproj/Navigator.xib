@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <development version="5100" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SPNavigatorController">
@@ -17,7 +17,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Navigator" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="3" userLabel="Navigator Window" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -41,7 +41,7 @@
                             <action selector="selectText:" target="8" id="149"/>
                         </connections>
                     </button>
-                    <searchField focusRingType="none" verticalHuggingPriority="750" id="8">
+                    <searchField wantsLayer="YES" focusRingType="none" verticalHuggingPriority="750" id="8">
                         <rect key="frame" x="20" y="336" width="174" height="19"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <searchFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" focusRingType="none" usesSingleLineMode="YES" bezelStyle="round" id="9">
@@ -65,8 +65,8 @@
                                     <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="14" horizontalPageScroll="10" verticalLineScroll="14" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="150">
                                         <rect key="frame" x="0.0" y="0.0" width="396" height="233"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <clipView key="contentView" id="YTv-7h-hUD">
-                                            <rect key="frame" x="1" y="17" width="394" height="215"/>
+                                        <clipView key="contentView" drawsBackground="NO" id="YTv-7h-hUD">
+                                            <rect key="frame" x="1" y="0.0" width="394" height="232"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <outlineView canDrawConcurrently="YES" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" emptySelection="NO" autosaveColumns="NO" autosaveName="SPNavigatorSchema2" rowHeight="14" headerView="154" indentationPerLevel="12" autoresizesOutlineColumn="YES" outlineTableColumn="155" id="153" customClass="SPNavigatorOutlineView">
@@ -111,7 +111,7 @@
                                                     </connections>
                                                 </outlineView>
                                             </subviews>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <nil key="backgroundColor"/>
                                         </clipView>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="152">
                                             <rect key="frame" x="1" y="65" width="120" height="11"/>
@@ -135,8 +135,8 @@
                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="135" userLabel="Bordered Scroll View (Table View Status Info)">
                                         <rect key="frame" x="0.0" y="0.0" width="396" height="100"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <clipView key="contentView" id="yBx-ea-p19">
-                                            <rect key="frame" x="1" y="17" width="394" height="82"/>
+                                        <clipView key="contentView" drawsBackground="NO" id="yBx-ea-p19">
+                                            <rect key="frame" x="1" y="0.0" width="394" height="99"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="18" headerView="136" id="137">
@@ -146,8 +146,8 @@
                                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn editable="NO" width="391" minWidth="40" maxWidth="1000" id="140">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Information">
+                                                        <tableColumn identifier="" editable="NO" width="391" minWidth="40" maxWidth="1000" id="140">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="信息">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,7 +166,7 @@
                                                     </connections>
                                                 </tableView>
                                             </subviews>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <nil key="backgroundColor"/>
                                         </clipView>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="small" horizontal="YES" id="138">
                                             <rect key="frame" x="1" y="38" width="393" height="11"/>
@@ -190,7 +190,7 @@
                         </holdingPriorities>
                     </splitView>
                     <button toolTip="Reload all (⌘R)" id="66">
-                        <rect key="frame" x="354.99999942450683" y="337" width="20" height="20"/>
+                        <rect key="frame" x="355" y="337" width="20" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRefreshFreestandingTemplate" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="67">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -206,9 +206,9 @@
                     <button toolTip="Synchronize connection window selection with Navigator (⌥⌘S)" verticalHuggingPriority="750" id="108">
                         <rect key="frame" x="252" y="337" width="95" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="recessed" title="sync" bezelStyle="recessed" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="109">
+                        <buttonCell key="cell" type="recessed" title="Sync" bezelStyle="recessed" imagePosition="overlaps" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="109">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                            <font key="font" metaFont="systemBold" size="12"/>
+                            <font key="font" size="12" name=".PingFangSC-Medium"/>
                             <string key="keyEquivalent">s</string>
                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                         </buttonCell>
@@ -222,6 +222,7 @@
             <connections>
                 <outlet property="initialFirstResponder" destination="153" id="162"/>
             </connections>
+            <point key="canvasLocation" x="132.5" y="161.5"/>
         </window>
     </objects>
     <resources>
