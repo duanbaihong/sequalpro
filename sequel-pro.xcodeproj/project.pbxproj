@@ -153,6 +153,7 @@
 		3876E1541CC0B26700D85154 /* button_add_folder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3876E1531CC0B26700D85154 /* button_add_folder@2x.png */; };
 		3876E15D1CC0BA0300D85154 /* SPTableFooterPopUpButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3876E15C1CC0BA0300D85154 /* SPTableFooterPopUpButtonCell.m */; };
 		387BBBA80FBCB6CB00B31746 /* SPTableRelations.m in Sources */ = {isa = PBXBuildFile; fileRef = 387BBBA70FBCB6CB00B31746 /* SPTableRelations.m */; };
+		3F5E774F20C11AEC005AEEC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E774E20C11AEC005AEEC4 /* Images.xcassets */; };
 		4D90B79A101E0CDF00D116A1 /* SPUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D90B799101E0CDF00D116A1 /* SPUserManager.m */; };
 		4D90B79E101E0CF200D116A1 /* SPUserManager.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 4D90B79B101E0CF200D116A1 /* SPUserManager.xcdatamodel */; };
 		4D90B79F101E0CF200D116A1 /* SPUserMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D90B79D101E0CF200D116A1 /* SPUserMO.m */; };
@@ -867,6 +868,7 @@
 		38C613701C89777B00B3B6EF /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		38C613721C8977E600B3B6EF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		38F37194182F0621008EB031 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
+		3F5E774E20C11AEC005AEEC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Sequel Pro/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		3FA4E70E20BD399900333E38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "Interfaces/zh-Hans.lproj/AboutPanel.xib"; sourceTree = "<group>"; };
 		3FA4E70F20BD399900333E38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/BundleEditor.xib"; sourceTree = "<group>"; };
 		3FA4E71020BD399900333E38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/BundleHTMLOutput.xib"; sourceTree = "<group>"; };
@@ -1969,6 +1971,7 @@
 		17E641430EF01E90001BC333 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F5E774E20C11AEC005AEEC4 /* Images.xcassets */,
 				1740F8370FC306C900CF3699 /* Plists */,
 				17E6418B0EF01FF7001BC333 /* Images */,
 				1740F8360FC306AE00CF3699 /* Scripting */,
@@ -2960,6 +2963,7 @@
 				582A05A9108A5CCF0027D42B /* ProgressIndicatorLayer.xib in Resources */,
 				174CE11E10AB80B5008F892B /* DatabaseProcessList.xib in Resources */,
 				1792C13210AD752100ABE758 /* DatabaseServerVariables.xib in Resources */,
+				3F5E774F20C11AEC005AEEC4 /* Images.xcassets in Resources */,
 				17CC97F710B4AC6C0034CD7A /* AboutPanel.xib in Resources */,
 				17CC993B10B4C9C80034CD7A /* License.rtf in Resources */,
 				58C3506510B9A56C00D37E14 /* button_left.png in Resources */,
@@ -3966,6 +3970,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icons/appIcon.icns;
 				CLANG_LINK_OBJC_RUNTIME = NO;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CLANG_WARN_BOOL_CONVERSION = YES;

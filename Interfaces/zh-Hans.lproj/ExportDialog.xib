@@ -215,8 +215,8 @@ Gw
                                                 <menu key="menu" title="OtherViews" id="1340">
                                                     <items>
                                                         <menuItem title="None" state="on" id="1341"/>
-                                                        <menuItem title="Gzip (Very fast, good compression)" tag="1" id="1342"/>
-                                                        <menuItem title="Bzip2 (Slower, very good compression)" tag="2" id="1343"/>
+                                                        <menuItem title="Gzip (非常快, 一般压缩率)" tag="1" id="1342"/>
+                                                        <menuItem title="Bzip2 (慢, 非常高压缩率)" tag="2" id="1343"/>
                                                     </items>
                                                 </menu>
                                             </popUpButtonCell>
@@ -313,14 +313,14 @@ Gw
                         <rect key="frame" x="20" y="45" width="365" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="kbp-v6-xrL">
-                            <rect key="frame" x="1" y="1" width="352" height="178"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <rect key="frame" x="1" y="1" width="348" height="178"/>
+                            <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" id="451">
                                     <rect key="frame" x="0.0" y="0.0" width="360" height="178"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="352" height="178"/>
+                                    <size key="minSize" width="348" height="178"/>
                                     <size key="maxSize" width="717" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 </textView>
@@ -1036,7 +1036,7 @@ Gw
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <clipView key="contentView" id="tJ1-mx-cYK">
                         <rect key="frame" x="1" y="0.0" width="532" height="530"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" headerView="1226" id="1229">
                                 <rect key="frame" x="0.0" y="0.0" width="532" height="513"/>
