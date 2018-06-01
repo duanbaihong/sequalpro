@@ -45,6 +45,7 @@
 	}
 }
 
+//NSObject
 #pragma mark -
 #pragma mark Keyboard shortcut additions
 
@@ -53,7 +54,7 @@
  * items only collapse if the unmodified key matches; this method allows keyboard
  * shortcuts without menu equivalents for a window, or the use of different base shortcuts.
  */
-- (void) sendEvent:(NSEvent *)theEvent
+- (void)sendEvent:(NSEvent *)theEvent
 {
 	if ([theEvent type] == NSKeyDown && [[theEvent charactersIgnoringModifiers] length]) {
 
