@@ -10,7 +10,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="SPDatabaseDocument">
             <connections>
                 <outlet property="addDatabaseButton" destination="581" id="6634"/>
-                <outlet property="chooseDatabaseButton" destination="3995" id="TqK-4i-Ajf"/>
+                <outlet property="chooseDatabaseButton" destination="gMN-bN-7pn" id="rLu-uQ-7b3"/>
                 <outlet property="contentViewSplitter" destination="7727" id="7733"/>
                 <outlet property="copyDatabaseButton" destination="6939" id="6983"/>
                 <outlet property="copyDatabaseDataButton" destination="6980" id="7039"/>
@@ -218,7 +218,7 @@
                                                         <outlet property="delegate" destination="68" id="7841"/>
                                                     </connections>
                                                 </splitView>
-                                                <scrollView focusRingType="none" misplaced="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="iE6-O4-sPe">
+                                                <scrollView focusRingType="none" misplaced="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" findBarPosition="belowContent" id="iE6-O4-sPe">
                                                     <rect key="frame" x="-3" y="330" width="220" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="i92-C9-zyI">
@@ -259,15 +259,15 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
                                                 </scrollView>
-                                                <popUpButton toolTip="选择一个数据库视图 (⇧⌘D)" verticalHuggingPriority="750" misplaced="YES" mirrorLayoutDirectionWhenInternationalizing="never" id="gMN-bN-7pn">
+                                                <popUpButton toolTip="选择一个数据库视图 (⇧⌘D)" verticalHuggingPriority="750" misplaced="YES" allowsExpansionToolTips="YES" mirrorLayoutDirectionWhenInternationalizing="never" id="gMN-bN-7pn">
                                                     <rect key="frame" x="2" y="332" width="210" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                    <popUpButtonCell key="cell" type="roundTextured" title="选择数据库..." alternateTitle="选择数据库..." bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" pullsDown="YES" selectedItem="0vl-5d-16R" id="eAy-oA-ceq">
-                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                        <font key="font" metaFont="menu"/>
+                                                    <popUpButtonCell key="cell" type="roundTextured" title="选择数据库..." bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" baseWritingDirection="leftToRight" imageScaling="proportionallyUpOrDown" inset="2" pullsDown="YES" id="eAy-oA-ceq">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
                                                         <menu key="menu" title="OtherViews" id="Hvf-ZK-cX5">
                                                             <items>
-                                                                <menuItem title="选择数据库..." state="on" hidden="YES" keyEquivalent="t" id="0vl-5d-16R">
+                                                                <menuItem title="选择数据库..." state="on" id="0vl-5d-16R">
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                 </menuItem>
                                                                 <menuItem isSeparatorItem="YES" id="cEg-fE-b2Y"/>
@@ -282,7 +282,7 @@
                                                         </menu>
                                                     </popUpButtonCell>
                                                     <connections>
-                                                        <action selector="setDatabases:" target="-2" id="jbW-34-luv"/>
+                                                        <action selector="chooseDatabase:" target="-2" id="yIb-Lg-G8Y"/>
                                                     </connections>
                                                 </popUpButton>
                                             </subviews>
@@ -1260,7 +1260,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" id="lwO-LP-RWZ">
                                                                             <rect key="frame" x="1" y="0.0" width="693" height="435"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <tableView identifier="TableContentTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="3920" id="36" customClass="SPCopyTable">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="693" height="418"/>
@@ -1330,7 +1330,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="kdv-Wp-s5h">
                                                                             <rect key="frame" x="0.0" y="0.0" width="694" height="40"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <ruleEditor nestingMode="compound" rowHeight="29" id="FF9-z2-9od">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="40"/>
@@ -1465,7 +1465,7 @@
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <clipView key="contentView" id="npE-bg-ppa">
                                                                                             <rect key="frame" x="1" y="1" width="694" height="140"/>
-                                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
                                                                                                 <textView focusRingType="none" importsGraphics="NO" richText="NO" horizontallyResizable="YES" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" usesRuler="YES" id="8254" customClass="SPTextView">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="140"/>
@@ -1740,7 +1740,7 @@ Gw
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <clipView key="contentView" id="NVV-XL-mVZ">
                                                                                             <rect key="frame" x="1" y="0.0" width="694" height="213"/>
-                                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
                                                                                                 <tableView identifier="CustomQueryResultsTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="7227" id="7224" customClass="SPCopyTable">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="196"/>
@@ -1848,7 +1848,7 @@ Gw
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Nr9-eI-xLJ">
                                                                             <rect key="frame" x="0.0" y="0.0" width="672" height="74"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textView editable="NO" drawsBackground="NO" importsGraphics="NO" horizontallyResizable="YES" verticallyResizable="YES" usesFontPanel="YES" allowsNonContiguousLayout="YES" id="8248">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="672" height="74"/>
@@ -1920,14 +1920,14 @@ Gw
                                                                         <rect key="frame" x="109" y="0.0" width="554" height="73"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" id="fhZ-nZ-AwI">
-                                                                            <rect key="frame" x="1" y="1" width="537" height="71"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <rect key="frame" x="1" y="1" width="541" height="71"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="panel" continuousSpellChecking="YES" smartInsertDelete="YES" id="8236">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="541" height="71"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="545" height="71"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                    <size key="minSize" width="537" height="71"/>
+                                                                                    <size key="minSize" width="541" height="71"/>
                                                                                     <size key="maxSize" width="1097" height="10000000"/>
                                                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <connections>
@@ -1965,14 +1965,14 @@ Gw
                                                                         <rect key="frame" x="109" y="0.0" width="554" height="200"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" id="nV8-ly-BSi">
-                                                                            <rect key="frame" x="1" y="1" width="537" height="198"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <rect key="frame" x="1" y="1" width="541" height="198"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" id="8242" customClass="SPTextView">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="541" height="198"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="545" height="198"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                    <size key="minSize" width="537" height="198"/>
+                                                                                    <size key="minSize" width="541" height="198"/>
                                                                                     <size key="maxSize" width="1097" height="10000000"/>
                                                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <connections>
@@ -2295,7 +2295,7 @@ Gw
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="EaV-iG-q8t">
                                                             <rect key="frame" x="1" y="0.0" width="694" height="475"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <tableView identifier="TableRelationsTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="5545" id="5548" customClass="SPCopyTable">
                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="458"/>
@@ -3874,7 +3874,7 @@ DQ
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" id="8219">
-                                    <rect key="frame" x="0.0" y="0.0" width="378" height="204"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="204"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="370" height="204"/>
@@ -4056,7 +4056,7 @@ Gw
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" id="8202">
-                                    <rect key="frame" x="0.0" y="0.0" width="360" height="175"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="364" height="175"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="352" height="175"/>
@@ -5077,6 +5077,7 @@ Gw
                     </view>
                     <color key="borderColor" white="0.0" alpha="0.20000000300000001" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.94758063550000005" alpha="1" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="message" size="11"/>
                 </box>
             </subviews>
             <point key="canvasLocation" x="19" y="-25"/>

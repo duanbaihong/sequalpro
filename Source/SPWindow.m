@@ -203,6 +203,7 @@
 		BOOL theResponse = [super validateMenuItem:menuItem];
 		if ([[self toolbar] isVisible] || [menuItem state] == NSOnState) {
 			[menuItem setTitle:NSLocalizedString(@"Hide Toolbar", @"Hide Toolbar menu item")];
+			
 		} else {
 			[menuItem setTitle:NSLocalizedString(@"Show Toolbar", @"Show Toolbar menu item")];
 		}

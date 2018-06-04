@@ -462,7 +462,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 	// Update the database list
 	[self setDatabases:self];
 	
-	[chooseDatabaseButton setEnabled:!_isWorkingLevel];
+	// [chooseDatabaseButton setEnabled:!_isWorkingLevel];
 
 	// Set the connection on the database structure builder
 	[databaseStructureRetrieval setConnectionToClone:mySQLConnection];
@@ -691,15 +691,19 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		[chooseDatabaseButton selectItemWithTitle:[self database]];
 		return;
 	}
-
+	NSLog(@"%zd",[chooseDatabaseButton indexOfSelectedItem]);
+//	NSLog(@"%@",sender);
+	NSLog(@"%@",[chooseDatabaseButton titleOfSelectedItem]);
 	if ( [chooseDatabaseButton indexOfSelectedItem] == 0 ) {
 		if ([self database]) {
 			[chooseDatabaseButton selectItemWithTitle:[self database]];
 		}
-		
 		return;
+	}else{
+		[chooseDatabaseButton selectItemAtIndex:([chooseDatabaseButton indexOfSelectedItem])];
 	}
-
+//	NSLog(@"%@",sender);
+	[chooseDatabaseButton setTarget:self];
 	// Lock editability again if performing a task
 	if (_isWorkingLevel) databaseListIsSelectable = NO;
 
@@ -1100,6 +1104,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 			// Reset chooseDatabaseButton
 			if ([[self database] length]) {
 				[chooseDatabaseButton selectItemWithTitle:[self database]];
+				// NSLog([self database]);
 			}
 			else {
 				[chooseDatabaseButton selectItemAtIndex:0];
@@ -1121,6 +1126,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 			// Reset chooseDatabaseButton
 			if ([[self database] length]) {
 				[chooseDatabaseButton selectItemWithTitle:[self database]];
+				// NSLog([self database]);
 			}
 			else {
 				[chooseDatabaseButton selectItemAtIndex:0];
@@ -1146,7 +1152,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 			}
 			else {
 				[chooseDatabaseButton selectItemAtIndex:0];
-		}
+			}
 		}
 #endif
 	}
@@ -4065,17 +4071,18 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 {
 	NSToolbarItem *toolbarItem = [[[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier] autorelease];
 
-	if ([itemIdentifier isEqualToString:SPMainToolbarDatabaseSelection]) {
-		[toolbarItem setLabel:NSLocalizedString(@"Select Database", @"toolbar item for selecting a db")];
-		[toolbarItem setPaletteLabel:[toolbarItem label]];
-		[toolbarItem setView:chooseDatabaseButton];
-		[toolbarItem setMinSize:NSMakeSize(200,26)];
-		[toolbarItem setMaxSize:NSMakeSize(200,32)];
-		[chooseDatabaseButton setTarget:self];
-		[chooseDatabaseButton setAction:@selector(chooseDatabase:)];
-		[chooseDatabaseButton setEnabled:(_isConnected && !_isWorkingLevel)];
+	// if ([itemIdentifier isEqualToString:SPMainToolbarDatabaseSelection]) {
+	// 	[toolbarItem setLabel:NSLocalizedString(@"Select Database", @"toolbar item for selecting a db")];
+	// 	[toolbarItem setPaletteLabel:[toolbarItem label]];
+	// 	[toolbarItem setView:chooseDatabaseButton];
+	// 	[toolbarItem setMinSize:NSMakeSize(200,26)];
+	// 	[toolbarItem setMaxSize:NSMakeSize(200,32)];
+	// 	[chooseDatabaseButton setTarget:self];
+	// 	[chooseDatabaseButton setAction:@selector(chooseDatabase:)];
+	// 	[chooseDatabaseButton setEnabled:(_isConnected && !_isWorkingLevel)];
 
-	} else if ([itemIdentifier isEqualToString:SPMainToolbarHistoryNavigation]) {
+	// } else
+	if ([itemIdentifier isEqualToString:SPMainToolbarHistoryNavigation]) {
 		[toolbarItem setLabel:NSLocalizedString(@"Table History", @"toolbar item for navigation history")];
 		[toolbarItem setPaletteLabel:[toolbarItem label]];
 		// At some point after 10.9 the sizing of NSSegmentedControl changed, resulting in clipping in newer OS X versions.
@@ -4184,24 +4191,24 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 	return toolbarItem;
 }
 
-- (void)toolbarWillAddItem:(NSNotification *)notification
-{
-	NSToolbarItem *toAdd = [[notification userInfo] objectForKey:@"item"];
+// - (void)toolbarWillAddItem:(NSNotification *)notification
+// {
+// 	NSToolbarItem *toAdd = [[notification userInfo] objectForKey:@"item"];
 	
-	if([[toAdd itemIdentifier] isEqualToString:SPMainToolbarDatabaseSelection]) {
-		chooseDatabaseToolbarItem = toAdd;
-		[self updateChooseDatabaseToolbarItemWidth];
-	}
-}
+// 	// if([[toAdd itemIdentifier] isEqualToString:SPMainToolbarDatabaseSelection]) {
+// 	// 	chooseDatabaseToolbarItem = toAdd;
+// 	// 	[self updateChooseDatabaseToolbarItemWidth];
+// 	// }
+// }
 
-- (void)toolbarDidRemoveItem:(NSNotification *)notification
-{
-	NSToolbarItem *removed = [[notification userInfo] objectForKey:@"item"];
+// - (void)toolbarDidRemoveItem:(NSNotification *)notification
+// {
+// 	NSToolbarItem *removed = [[notification userInfo] objectForKey:@"item"];
 	
-	if([[removed itemIdentifier] isEqualToString:SPMainToolbarDatabaseSelection]) {
-		chooseDatabaseToolbarItem = nil;
-	}
-}
+// 	if([[removed itemIdentifier] isEqualToString:SPMainToolbarDatabaseSelection]) {
+// 		chooseDatabaseToolbarItem = nil;
+// 	}
+// }
 
 /**
  * toolbar delegate method
@@ -4209,7 +4216,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 - (NSArray *)toolbarAllowedItemIdentifiers:(NSToolbar*)toolbar
 {
 	return @[
-		SPMainToolbarDatabaseSelection,
+		// SPMainToolbarDatabaseSelection,
 		SPMainToolbarHistoryNavigation,
 		SPMainToolbarShowConsole,
 		SPMainToolbarClearConsole,
@@ -4233,7 +4240,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 - (NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar*)toolbar
 {
 	return @[
-		SPMainToolbarDatabaseSelection,
+		// SPMainToolbarDatabaseSelection,
 		SPMainToolbarTableStructure,
 		SPMainToolbarTableContent,
 		SPMainToolbarTableRelations,
