@@ -44,6 +44,7 @@
                     </tabView>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="9" y="165.5"/>
         </window>
     </objects>
 </document>
