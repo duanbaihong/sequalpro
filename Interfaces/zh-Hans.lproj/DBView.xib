@@ -262,16 +262,16 @@
                                                 <popUpButton toolTip="选择一个数据库视图 (⇧⌘D)" verticalHuggingPriority="750" misplaced="YES" allowsExpansionToolTips="YES" mirrorLayoutDirectionWhenInternationalizing="never" id="gMN-bN-7pn">
                                                     <rect key="frame" x="2" y="332" width="210" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                    <popUpButtonCell key="cell" type="roundTextured" title="选择数据库..." bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" baseWritingDirection="leftToRight" imageScaling="proportionallyUpOrDown" inset="2" pullsDown="YES" id="eAy-oA-ceq">
+                                                    <popUpButtonCell key="cell" type="roundTextured" title="选择数据库..." bezelStyle="texturedRounded" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" baseWritingDirection="leftToRight" inset="2" selectedItem="0vl-5d-16R" id="eAy-oA-ceq">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
+                                                        <font key="font" metaFont="menu"/>
                                                         <menu key="menu" title="OtherViews" id="Hvf-ZK-cX5">
                                                             <items>
-                                                                <menuItem title="选择数据库..." state="on" id="0vl-5d-16R">
+                                                                <menuItem title="选择数据库..." state="on" image="database-small" id="0vl-5d-16R">
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                 </menuItem>
                                                                 <menuItem isSeparatorItem="YES" id="cEg-fE-b2Y"/>
-                                                                <menuItem title="添加数据库..." alternate="YES" toolTip="添加数据库..." id="1bm-eo-pHY">
+                                                                <menuItem title="添加数据库..." image="AddTabButtonPushed" onStateImage="AddTabButton" alternate="YES" toolTip="添加数据库..." id="1bm-eo-pHY">
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                     <connections>
                                                                         <action selector="addDatabase:" target="-1" id="Fr3-YZ-jOI"/>
@@ -1260,7 +1260,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" id="lwO-LP-RWZ">
                                                                             <rect key="frame" x="1" y="0.0" width="693" height="435"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
                                                                                 <tableView identifier="TableContentTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="3920" id="36" customClass="SPCopyTable">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="693" height="418"/>
@@ -1330,7 +1330,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="kdv-Wp-s5h">
                                                                             <rect key="frame" x="0.0" y="0.0" width="694" height="40"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
                                                                                 <ruleEditor nestingMode="compound" rowHeight="29" id="FF9-z2-9od">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="40"/>
@@ -1465,7 +1465,7 @@
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <clipView key="contentView" id="npE-bg-ppa">
                                                                                             <rect key="frame" x="1" y="1" width="694" height="140"/>
-                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                            <autoresizingMask key="autoresizingMask"/>
                                                                                             <subviews>
                                                                                                 <textView focusRingType="none" importsGraphics="NO" richText="NO" horizontallyResizable="YES" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" usesRuler="YES" id="8254" customClass="SPTextView">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="140"/>
@@ -1740,7 +1740,7 @@ Gw
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <clipView key="contentView" id="NVV-XL-mVZ">
                                                                                             <rect key="frame" x="1" y="0.0" width="694" height="213"/>
-                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                            <autoresizingMask key="autoresizingMask"/>
                                                                                             <subviews>
                                                                                                 <tableView identifier="CustomQueryResultsTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="7227" id="7224" customClass="SPCopyTable">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="196"/>
@@ -1848,7 +1848,7 @@ Gw
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Nr9-eI-xLJ">
                                                                             <rect key="frame" x="0.0" y="0.0" width="672" height="74"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
                                                                                 <textView editable="NO" drawsBackground="NO" importsGraphics="NO" horizontallyResizable="YES" verticallyResizable="YES" usesFontPanel="YES" allowsNonContiguousLayout="YES" id="8248">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="672" height="74"/>
@@ -1920,14 +1920,14 @@ Gw
                                                                         <rect key="frame" x="109" y="0.0" width="554" height="73"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" id="fhZ-nZ-AwI">
-                                                                            <rect key="frame" x="1" y="1" width="541" height="71"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <rect key="frame" x="1" y="1" width="552" height="71"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
                                                                                 <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="panel" continuousSpellChecking="YES" smartInsertDelete="YES" id="8236">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="545" height="71"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                    <size key="minSize" width="541" height="71"/>
+                                                                                    <size key="minSize" width="545" height="71"/>
                                                                                     <size key="maxSize" width="1097" height="10000000"/>
                                                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <connections>
@@ -1965,14 +1965,14 @@ Gw
                                                                         <rect key="frame" x="109" y="0.0" width="554" height="200"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" id="nV8-ly-BSi">
-                                                                            <rect key="frame" x="1" y="1" width="541" height="198"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <rect key="frame" x="1" y="1" width="552" height="198"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
                                                                                 <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" id="8242" customClass="SPTextView">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="545" height="198"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                    <size key="minSize" width="541" height="198"/>
+                                                                                    <size key="minSize" width="545" height="198"/>
                                                                                     <size key="maxSize" width="1097" height="10000000"/>
                                                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <connections>
@@ -2295,7 +2295,7 @@ Gw
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="EaV-iG-q8t">
                                                             <rect key="frame" x="1" y="0.0" width="694" height="475"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <tableView identifier="TableRelationsTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="5545" id="5548" customClass="SPCopyTable">
                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="458"/>
@@ -3870,14 +3870,14 @@ DQ
                         <rect key="frame" x="-1" y="35" width="383" height="206"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="w4Z-p1-GZA">
-                            <rect key="frame" x="1" y="1" width="370" height="204"/>
+                            <rect key="frame" x="1" y="1" width="381" height="204"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" id="8219">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="204"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="370" height="204"/>
+                                    <size key="minSize" width="381" height="204"/>
                                     <size key="maxSize" width="753" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <connections>
@@ -3892,7 +3892,7 @@ DQ
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="8217">
-                            <rect key="frame" x="371" y="1" width="11" height="204"/>
+                            <rect key="frame" x="368" y="1" width="14" height="204"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -4052,14 +4052,14 @@ Gw
                         <rect key="frame" x="20" y="45" width="365" height="177"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="aEl-zD-ga2">
-                            <rect key="frame" x="1" y="1" width="352" height="175"/>
+                            <rect key="frame" x="1" y="1" width="363" height="175"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" id="8202">
                                     <rect key="frame" x="0.0" y="0.0" width="364" height="175"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="352" height="175"/>
+                                    <size key="minSize" width="363" height="175"/>
                                     <size key="maxSize" width="717" height="10000000"/>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 </textView>
@@ -4071,7 +4071,7 @@ Gw
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="8200">
-                            <rect key="frame" x="353" y="1" width="11" height="175"/>
+                            <rect key="frame" x="350" y="1" width="14" height="175"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -4244,12 +4244,12 @@ Gw
             </view>
             <point key="canvasLocation" x="543" y="737"/>
         </window>
-        <customView id="3994" userLabel="Custom Toolbar Views">
-            <rect key="frame" x="0.0" y="0.0" width="269" height="32"/>
+        <customView misplaced="YES" id="3994" userLabel="Custom Toolbar Views">
+            <rect key="frame" x="0.0" y="0.0" width="58" height="24"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <segmentedControl verticalHuggingPriority="750" id="6293">
-                    <rect key="frame" x="208" y="3" width="57" height="25"/>
+                <segmentedControl verticalHuggingPriority="750" misplaced="YES" id="6293">
+                    <rect key="frame" x="0.0" y="-1" width="57" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="momentary" id="6294">
                         <font key="font" metaFont="system"/>
@@ -4262,29 +4262,8 @@ Gw
                         <action selector="historyControlClicked:" target="6297" id="6300"/>
                     </connections>
                 </segmentedControl>
-                <popUpButton toolTip="Select a database to view (⇧⌘D)" verticalHuggingPriority="750" id="3995">
-                    <rect key="frame" x="0.0" y="3" width="200" height="26"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <popUpButtonCell key="cell" type="roundTextured" title="选择数据库..." bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" selectedItem="3998" id="3996">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="titleBar" size="12"/>
-                        <menu key="menu" title="OtherViews" id="3997">
-                            <items>
-                                <menuItem title="选择数据库..." state="on" id="3998"/>
-                                <menuItem isSeparatorItem="YES" id="4521"/>
-                                <menuItem title="添加数据库..." id="4523">
-                                    <modifierMask key="keyEquivalentModifierMask"/>
-                                    <connections>
-                                        <action selector="addDatabase:" target="-1" id="4524"/>
-                                    </connections>
-                                </menuItem>
-                                <menuItem isSeparatorItem="YES" state="on" id="4522"/>
-                            </items>
-                        </menu>
-                    </popUpButtonCell>
-                </popUpButton>
             </subviews>
-            <point key="canvasLocation" x="-973" y="447"/>
+            <point key="canvasLocation" x="-1079" y="443"/>
         </customView>
         <customView id="5999" userLabel="Title Icon View">
             <rect key="frame" x="0.0" y="0.0" width="110" height="20"/>
@@ -5077,13 +5056,14 @@ Gw
                     </view>
                     <color key="borderColor" white="0.0" alpha="0.20000000300000001" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.94758063550000005" alpha="1" colorSpace="calibratedWhite"/>
-                    <font key="titleFont" metaFont="message" size="11"/>
                 </box>
             </subviews>
             <point key="canvasLocation" x="19" y="-25"/>
         </customView>
     </objects>
     <resources>
+        <image name="AddTabButton" width="22" height="23"/>
+        <image name="AddTabButtonPushed" width="11" height="11"/>
         <image name="NSAdvanced" width="32" height="32"/>
         <image name="NSApplicationIcon" width="128" height="128"/>
         <image name="NSGoLeftTemplate" width="9" height="12"/>
@@ -5106,6 +5086,7 @@ Gw
         <image name="button_refresh" width="30" height="22"/>
         <image name="button_remove" width="30" height="22"/>
         <image name="button_right" width="30" height="22"/>
+        <image name="database-small" width="16" height="16"/>
         <image name="grabber-horizontal" width="10" height="8"/>
     </resources>
 </document>

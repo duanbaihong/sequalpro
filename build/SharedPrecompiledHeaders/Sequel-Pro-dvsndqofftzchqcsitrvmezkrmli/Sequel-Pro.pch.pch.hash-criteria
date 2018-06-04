@@ -1,0 +1,19 @@
+-x
+c
+-arch
+x86_64
+-std=c99
+-gmodules
+-fpascal-strings
+-O0
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk
+-fasm-blocks
+-mmacosx-version-min=10.6
+-g
+-I/Users/dbh/Desktop/code/sequalpro/build/Debug/include
+-F/Users/dbh/Desktop/code/sequalpro/build/Debug
+x86_64-apple-darwin17.5.0
+"4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.1)"
+SDK_PRODUCT_BUILD_VERSION=17E189
+17E189

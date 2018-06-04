@@ -632,7 +632,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 	[[chooseDatabaseButton menu] addItem:[NSMenuItem separatorItem]];
 	[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Add Database...", @"menu item to add db") action:@selector(addDatabase:) keyEquivalent:@""];
 	[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Refresh Databases", @"menu item to refresh databases") action:@selector(setDatabases:) keyEquivalent:@""];
-	[[chooseDatabaseButton menu] addItem:[NSMenuItem separatorItem]];
+	[[chooseDatabaseButton menu] addItem:[NSMenuItem separatorItem ]];
 #endif
 
 	if (allDatabases) SPClear(allDatabases);
