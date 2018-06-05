@@ -631,8 +631,8 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 //	[chooseDatabaseButton addItemWithTitle:NSLocalizedString(@"Choose Database...", @"menu item for choose db")];
 	[[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Choose Database...", @"menu item for choose db") action:"" keyEquivalent:@""] setImage:[NSImage imageNamed:@"database-small"]];
 	[[chooseDatabaseButton menu] addItem:[NSMenuItem separatorItem]];
-	[[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Add Database...", @"menu item to add db") action:@selector(addDatabase:) keyEquivalent:@""] setImage:[NSImage imageNamed:@"link-arrow"]];
-	[[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Refresh Databases", @"menu item to refresh databases") action:@selector(setDatabases:) keyEquivalent:@""] setImage:[NSImage imageNamed:@"sync_arrows_01"]];
+	[[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Add Database...", @"menu item to add db") action:@selector(addDatabase:) keyEquivalent:@""] setImage:[NSImage imageNamed:@"database_add_16px"]];
+	[[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Refresh Databases", @"menu item to refresh databases") action:@selector(setDatabases:) keyEquivalent:@""] setImage:[NSImage imageNamed:@"database_reflush_16px"]];
 	[[chooseDatabaseButton menu] addItem:[NSMenuItem separatorItem ]];
 #endif
 
@@ -664,7 +664,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 	{
 		NSMenuItem *itemDbMenu=[[NSMenuItem alloc] init];
 		itemDbMenu.title=db;
-		[itemDbMenu setImage:[NSImage imageNamed:@"database-small"]];
+		[itemDbMenu setImage:[NSImage imageNamed:@"database_green_16px"]];
 		[[chooseDatabaseButton menu] addItem:itemDbMenu];
 //		[chooseDatabaseButton addItemWithTitle:db];
 	}
@@ -679,7 +679,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 	{
 		NSMenuItem *itemDbMenu=[[NSMenuItem alloc] init];
 		itemDbMenu.title=db;
-		[itemDbMenu setImage:[NSImage imageNamed:@"database-small"]];
+		[itemDbMenu setImage:[NSImage imageNamed:@"database_green_16px"]];
 		[[chooseDatabaseButton menu] addItem:itemDbMenu];
 	}
 
