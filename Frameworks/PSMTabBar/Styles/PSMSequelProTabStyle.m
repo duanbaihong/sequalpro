@@ -102,9 +102,12 @@ typedef struct {
         sequelProCloseDirtyButtonDown = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"SequelProTabDirty_Pressed"]];
         sequelProCloseDirtyButtonOver = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"SequelProTabDirty_Rollover"]];
                 
-        _addTabButtonImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"AddTabButton"]];
-        _addTabButtonPressedImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"AddTabButton"]];
-        _addTabButtonRolloverImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"AddTabButton"]];
+        _addTabButtonImage = [NSImage imageNamed:@"button_add"];
+//		_addTabButtonImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"AddTabButton"]];
+//		_addTabButtonPressedImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"AddTabButton"]];
+//		_addTabButtonRolloverImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"AddTabButton"]];
+		_addTabButtonPressedImage = [NSImage imageNamed:@"button_add"];
+		_addTabButtonRolloverImage = [NSImage imageNamed:@"button_add"];
 		
 		_objectCountStringAttributes = [[NSDictionary alloc] initWithObjectsAndKeys:
 										[[NSFontManager sharedFontManager] convertFont:[NSFont fontWithName:@"Helvetica" size:11.0f] toHaveTrait:NSBoldFontMask], NSFontAttributeName,

@@ -123,7 +123,7 @@
 	_orientation = PSMTabBarHorizontalOrientation;
     _canCloseOnlyTab = NO;
 	_disableTabClose = NO;
-    _showAddTabButton = NO;
+    _showAddTabButton = YES;
     _hideForSingleTab = NO;
     _sizeCellsToFit = NO;
     _isHidden = NO;
