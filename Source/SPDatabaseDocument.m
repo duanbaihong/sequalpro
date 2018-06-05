@@ -628,10 +628,11 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 
 	[chooseDatabaseButton removeAllItems];
 
-	[chooseDatabaseButton addItemWithTitle:NSLocalizedString(@"Choose Database...", @"menu item for choose db")];
+//	[chooseDatabaseButton addItemWithTitle:NSLocalizedString(@"Choose Database...", @"menu item for choose db")];
+	[[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Choose Database...", @"menu item for choose db") action:"" keyEquivalent:@""] setImage:[NSImage imageNamed:@"database-small"]];
 	[[chooseDatabaseButton menu] addItem:[NSMenuItem separatorItem]];
-	[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Add Database...", @"menu item to add db") action:@selector(addDatabase:) keyEquivalent:@""];
-	[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Refresh Databases", @"menu item to refresh databases") action:@selector(setDatabases:) keyEquivalent:@""];
+	[[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Add Database...", @"menu item to add db") action:@selector(addDatabase:) keyEquivalent:@""] setImage:[NSImage imageNamed:@"link-arrow"]];
+	[[[chooseDatabaseButton menu] addItemWithTitle:NSLocalizedString(@"Refresh Databases", @"menu item to refresh databases") action:@selector(setDatabases:) keyEquivalent:@""] setImage:[NSImage imageNamed:@"sync_arrows_01"]];
 	[[chooseDatabaseButton menu] addItem:[NSMenuItem separatorItem ]];
 #endif
 
@@ -661,7 +662,11 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 	// Add system databases
 	for (NSString *db in allSystemDatabases) 
 	{
-		[chooseDatabaseButton addItemWithTitle:db];
+		NSMenuItem *itemDbMenu=[[NSMenuItem alloc] init];
+		itemDbMenu.title=db;
+		[itemDbMenu setImage:[NSImage imageNamed:@"database-small"]];
+		[[chooseDatabaseButton menu] addItem:itemDbMenu];
+//		[chooseDatabaseButton addItemWithTitle:db];
 	}
 	
 	// Add a separator between the system and user databases
@@ -672,7 +677,10 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 	// Add user databases
 	for (NSString *db in allDatabases) 
 	{
-		[chooseDatabaseButton addItemWithTitle:db];
+		NSMenuItem *itemDbMenu=[[NSMenuItem alloc] init];
+		itemDbMenu.title=db;
+		[itemDbMenu setImage:[NSImage imageNamed:@"database-small"]];
+		[[chooseDatabaseButton menu] addItem:itemDbMenu];
 	}
 
 	(![self database]) ? [chooseDatabaseButton selectItemAtIndex:0] : [chooseDatabaseButton selectItemWithTitle:[self database]];
@@ -691,9 +699,6 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		[chooseDatabaseButton selectItemWithTitle:[self database]];
 		return;
 	}
-	NSLog(@"%zd",[chooseDatabaseButton indexOfSelectedItem]);
-//	NSLog(@"%@",sender);
-	NSLog(@"%@",[chooseDatabaseButton titleOfSelectedItem]);
 	if ( [chooseDatabaseButton indexOfSelectedItem] == 0 ) {
 		if ([self database]) {
 			[chooseDatabaseButton selectItemWithTitle:[self database]];
@@ -702,8 +707,6 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 	}else{
 		[chooseDatabaseButton selectItemAtIndex:([chooseDatabaseButton indexOfSelectedItem])];
 	}
-//	NSLog(@"%@",sender);
-	[chooseDatabaseButton setTarget:self];
 	// Lock editability again if performing a task
 	if (_isWorkingLevel) databaseListIsSelectable = NO;
 
@@ -4217,7 +4220,6 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 {
 	return @[
 		// SPMainToolbarDatabaseSelection,
-		SPMainToolbarHistoryNavigation,
 		SPMainToolbarShowConsole,
 		SPMainToolbarClearConsole,
 		SPMainToolbarTableStructure,
@@ -4230,7 +4232,8 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		NSToolbarCustomizeToolbarItemIdentifier,
 		NSToolbarFlexibleSpaceItemIdentifier,
 		NSToolbarSpaceItemIdentifier,
-		NSToolbarSeparatorItemIdentifier
+		NSToolbarSeparatorItemIdentifier,
+		SPMainToolbarHistoryNavigation
 	];
 }
 
@@ -4248,9 +4251,9 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		SPMainToolbarTableInfo,
 		SPMainToolbarCustomQuery,
 		NSToolbarFlexibleSpaceItemIdentifier,
-		SPMainToolbarHistoryNavigation,
 		SPMainToolbarUserManager,
-		SPMainToolbarShowConsole
+		SPMainToolbarShowConsole,
+		SPMainToolbarHistoryNavigation
 	];
 }
 

@@ -95,8 +95,8 @@
 
 		[NSApp setDelegate:self];
 	}
-
 	return self;
+
 }
 
 /**
