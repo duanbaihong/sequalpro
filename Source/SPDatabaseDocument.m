@@ -679,6 +679,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 	{
 		NSMenuItem *itemDbMenu=[[NSMenuItem alloc] init];
 		itemDbMenu.title=db;
+//		[itemDbMenu setImagePosition:2];
 		[itemDbMenu setImage:[NSImage imageNamed:@"database_green_16px"]];
 		[[chooseDatabaseButton menu] addItem:itemDbMenu];
 	}
