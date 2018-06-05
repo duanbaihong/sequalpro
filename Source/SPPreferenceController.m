@@ -306,7 +306,8 @@
 			 SPPreferenceToolbarEditor,
 			 SPPreferenceToolbarShortcuts,
 			 SPPreferenceToolbarAutoUpdate,
-			 SPPreferenceToolbarNetwork
+			 SPPreferenceToolbarNetwork,
+//			 SPMainToolbarServerInfo
 			 ];
 }
 

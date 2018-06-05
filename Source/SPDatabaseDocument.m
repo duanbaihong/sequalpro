@@ -4187,11 +4187,21 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		[toolbarItem setTarget:self];
 		[toolbarItem setAction:@selector(showUserManager:)];
 		
+	} else if ([itemIdentifier isEqualToString:SPMainToolbarServerInfo]) {
+		[toolbarItem setLabel:NSLocalizedString(@"ServerInfo", @"ServerInfo")];
+		[toolbarItem setPaletteLabel:NSLocalizedString(@"ServerInfo", @"toolbar item label for switching to the ServerInfo tab")];
+		//set up tooltip and image
+		[toolbarItem setToolTip:NSLocalizedString(@"Switch to the ServerInfo tab", @"tooltip for toolbar item for switching to the ServerInfo tab")];
+		[toolbarItem setImage:[NSImage imageNamed:@"toolbar-switch-to-table-relations"]];
+		//set up the target action
+		[toolbarItem setTarget:self];
+		[toolbarItem setAction:@""];
+		
 	} else {
 		//itemIdentifier refered to a toolbar item that is not provided or supported by us or cocoa 
 		toolbarItem = nil;
 	}
-
+	NSLog(itemIdentifier);
 	return toolbarItem;
 }
 
@@ -4234,7 +4244,8 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		NSToolbarFlexibleSpaceItemIdentifier,
 		NSToolbarSpaceItemIdentifier,
 		NSToolbarSeparatorItemIdentifier,
-		SPMainToolbarHistoryNavigation
+		SPMainToolbarHistoryNavigation,
+		SPMainToolbarServerInfo
 	];
 }
 
@@ -4251,6 +4262,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		SPMainToolbarTableTriggers,
 		SPMainToolbarTableInfo,
 		SPMainToolbarCustomQuery,
+		SPMainToolbarServerInfo,
 		NSToolbarFlexibleSpaceItemIdentifier,
 		SPMainToolbarUserManager,
 		SPMainToolbarShowConsole,
@@ -4269,7 +4281,8 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		SPMainToolbarCustomQuery,
 		SPMainToolbarTableInfo,
 		SPMainToolbarTableRelations,
-		SPMainToolbarTableTriggers
+		SPMainToolbarTableTriggers,
+		SPMainToolbarServerInfo
 	];
 
 }

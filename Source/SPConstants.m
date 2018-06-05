@@ -271,6 +271,7 @@ NSString *SPMainToolbarTableInfo                 = @"SwitchToTableInfoToolbarIte
 NSString *SPMainToolbarTableRelations            = @"SwitchToTableRelationsToolbarItemIdentifier";
 NSString *SPMainToolbarTableTriggers             = @"SwitchToTableTriggersToolbarItemIdentifier";
 NSString *SPMainToolbarUserManager               = @"SwitchToUserManagerToolbarItemIdentifier";
+NSString *SPMainToolbarServerInfo               = @"SPMainToolbarServerInfoIdentifier";
 
 NSString **SPViewModeToMainToolbarMap[] = 
 { 
@@ -280,7 +281,8 @@ NSString **SPViewModeToMainToolbarMap[] =
 	&SPMainToolbarCustomQuery, 
 	&SPMainToolbarTableInfo, 
 	&SPMainToolbarTableRelations, 
-	&SPMainToolbarTableTriggers
+	&SPMainToolbarTableTriggers,
+	&SPMainToolbarServerInfo
 };
 
 // Preferences toolbar
