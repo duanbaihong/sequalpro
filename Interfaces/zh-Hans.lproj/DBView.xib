@@ -1260,7 +1260,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" id="lwO-LP-RWZ">
                                                                             <rect key="frame" x="1" y="0.0" width="693" height="435"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <tableView identifier="TableContentTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="3920" id="36" customClass="SPCopyTable">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="693" height="418"/>
@@ -1330,7 +1330,7 @@
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="kdv-Wp-s5h">
                                                                             <rect key="frame" x="0.0" y="0.0" width="694" height="40"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <ruleEditor nestingMode="compound" rowHeight="29" id="FF9-z2-9od">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="40"/>
@@ -1465,7 +1465,7 @@
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <clipView key="contentView" id="npE-bg-ppa">
                                                                                             <rect key="frame" x="1" y="1" width="694" height="140"/>
-                                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
                                                                                                 <textView focusRingType="none" importsGraphics="NO" richText="NO" horizontallyResizable="YES" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" usesRuler="YES" id="8254" customClass="SPTextView">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="140"/>
@@ -1645,8 +1645,8 @@ Gw
                                                                                             </menu>
                                                                                         </popUpButtonCell>
                                                                                     </popUpButton>
-                                                                                    <popUpButton toolTip="Choose a favorite from the menu or save queries to the favorites (⌥⌘F)" verticalHuggingPriority="750" id="7218">
-                                                                                        <rect key="frame" x="38" y="213" width="129" height="22"/>
+                                                                                    <popUpButton toolTip="Choose a favorite from the menu or save queries to the favorites (⌥⌘F)" verticalHuggingPriority="750" misplaced="YES" id="7218">
+                                                                                        <rect key="frame" x="38" y="213" width="97" height="22"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                                                                         <popUpButtonCell key="cell" type="recessed" title="查询收藏夹" bezelStyle="recessed" alignment="center" controlSize="small" lineBreakMode="clipping" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="7264" id="7262">
                                                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
@@ -1681,66 +1681,12 @@ Gw
                                                                                             <action selector="chooseQueryFavorite:" target="134" id="7316"/>
                                                                                         </connections>
                                                                                     </popUpButton>
-                                                                                    <popUpButton toolTip="Choose a query from your recent queries (⌥⌘Y)" verticalHuggingPriority="750" id="7217">
-                                                                                        <rect key="frame" x="177" y="213" width="145" height="22"/>
-                                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                        <popUpButtonCell key="cell" type="recessed" title="查询历史" bezelStyle="recessed" alignment="center" controlSize="small" lineBreakMode="clipping" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="7273" id="7271">
-                                                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
-                                                                                            <font key="font" metaFont="smallSystem"/>
-                                                                                            <string key="keyEquivalent">y</string>
-                                                                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-                                                                                            <menu key="menu" title="OtherViews" id="7272">
-                                                                                                <items>
-                                                                                                    <menuItem title="查询历史" hidden="YES" id="7273"/>
-                                                                                                    <menuItem title="复制历史" tag="300000" toolTip="Copy all history items onto the clipboard." id="7279">
-                                                                                                        <modifierMask key="keyEquivalentModifierMask" option="YES"/>
-                                                                                                        <connections>
-                                                                                                            <action selector="copyQueryHistory:" target="134" id="7312"/>
-                                                                                                        </connections>
-                                                                                                    </menuItem>
-                                                                                                    <menuItem title="保存历史..." tag="300001" alternate="YES" toolTip="Save all history items to file. Press ⌥ to copy all history items onto the clipboard." id="7276">
-                                                                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                                                                        <connections>
-                                                                                                            <action selector="saveQueryHistory:" target="134" id="7324"/>
-                                                                                                        </connections>
-                                                                                                    </menuItem>
-                                                                                                    <menuItem tag="300002" id="7277">
-                                                                                                        <string key="title">清除历史记录
-</string>
-                                                                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                                                                        <connections>
-                                                                                                            <action selector="clearQueryHistory:" target="134" id="7311"/>
-                                                                                                        </connections>
-                                                                                                    </menuItem>
-                                                                                                    <menuItem isSeparatorItem="YES" id="7278"/>
-                                                                                                    <menuItem title="..搜索字段占位符.." id="7274">
-                                                                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                                                                        <connections>
-                                                                                                            <outlet property="view" destination="6447" id="7299"/>
-                                                                                                        </connections>
-                                                                                                    </menuItem>
-                                                                                                    <menuItem isSeparatorItem="YES" id="7275"/>
-                                                                                                </items>
-                                                                                                <connections>
-                                                                                                    <outlet property="delegate" destination="134" id="7302"/>
-                                                                                                </connections>
-                                                                                            </menu>
-                                                                                        </popUpButtonCell>
-                                                                                        <connections>
-                                                                                            <action selector="chooseQueryHistory:" target="134" id="7326"/>
-                                                                                            <binding destination="1907" name="hidden" keyPath="values.CustomQueryMaxHistoryItems" id="7290">
-                                                                                                <dictionary key="options">
-                                                                                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                                                                                </dictionary>
-                                                                                            </binding>
-                                                                                        </connections>
-                                                                                    </popUpButton>
                                                                                     <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="18" horizontalPageScroll="10" verticalLineScroll="18" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="7223">
                                                                                         <rect key="frame" x="0.0" y="-1" width="696" height="214"/>
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <clipView key="contentView" id="NVV-XL-mVZ">
                                                                                             <rect key="frame" x="1" y="0.0" width="694" height="213"/>
-                                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
                                                                                                 <tableView identifier="CustomQueryResultsTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="7227" id="7224" customClass="SPCopyTable">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="196"/>
@@ -1784,8 +1730,8 @@ Gw
                                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                                         </tableHeaderView>
                                                                                     </scrollView>
-                                                                                    <popUpButton verticalHuggingPriority="750" id="8316" customClass="SPComboPopupButton">
-                                                                                        <rect key="frame" x="508" y="213" width="180" height="22"/>
+                                                                                    <popUpButton verticalHuggingPriority="750" misplaced="YES" id="8316" customClass="SPComboPopupButton">
+                                                                                        <rect key="frame" x="586" y="213" width="102" height="22"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                                         <popUpButtonCell key="cell" type="roundRect" title="运行当前" bezelStyle="roundedRect" alignment="center" controlSize="small" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" pullsDown="YES" selectedItem="8319" id="8317" customClass="SPComboPopupButtonCell">
                                                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1815,6 +1761,58 @@ Gw
                                                                                         </popUpButtonCell>
                                                                                         <connections>
                                                                                             <action selector="runPrimaryQueryAction:" target="134" id="8328"/>
+                                                                                        </connections>
+                                                                                    </popUpButton>
+                                                                                    <popUpButton toolTip="Choose a query from your recent queries (⌥⌘Y)" verticalHuggingPriority="750" misplaced="YES" id="7217">
+                                                                                        <rect key="frame" x="134" y="212" width="91" height="22"/>
+                                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                        <popUpButtonCell key="cell" type="recessed" title="查询历史" bezelStyle="recessed" alignment="center" controlSize="small" lineBreakMode="clipping" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="7273" id="7271">
+                                                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                                                            <font key="font" metaFont="smallSystem"/>
+                                                                                            <string key="keyEquivalent">y</string>
+                                                                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                                                                            <menu key="menu" title="OtherViews" id="7272">
+                                                                                                <items>
+                                                                                                    <menuItem title="查询历史" image="history_file" hidden="YES" id="7273"/>
+                                                                                                    <menuItem title="复制历史" image="page_save" tag="300000" toolTip="Copy all history items onto the clipboard." id="7279">
+                                                                                                        <modifierMask key="keyEquivalentModifierMask" option="YES"/>
+                                                                                                        <connections>
+                                                                                                            <action selector="copyQueryHistory:" target="134" id="7312"/>
+                                                                                                        </connections>
+                                                                                                    </menuItem>
+                                                                                                    <menuItem title="保存历史..." image="save" tag="300001" alternate="YES" toolTip="Save all history items to file. Press ⌥ to copy all history items onto the clipboard." id="7276">
+                                                                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                                                                        <connections>
+                                                                                                            <action selector="saveQueryHistory:" target="134" id="7324"/>
+                                                                                                        </connections>
+                                                                                                    </menuItem>
+                                                                                                    <menuItem title="清除历史记录" image="clear" tag="300002" id="7277">
+                                                                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                                                                        <connections>
+                                                                                                            <action selector="clearQueryHistory:" target="134" id="7311"/>
+                                                                                                        </connections>
+                                                                                                    </menuItem>
+                                                                                                    <menuItem isSeparatorItem="YES" id="7278"/>
+                                                                                                    <menuItem title="..搜索字段占位符.." id="7274">
+                                                                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                                                                        <connections>
+                                                                                                            <outlet property="view" destination="6447" id="7299"/>
+                                                                                                        </connections>
+                                                                                                    </menuItem>
+                                                                                                    <menuItem isSeparatorItem="YES" id="7275"/>
+                                                                                                </items>
+                                                                                                <connections>
+                                                                                                    <outlet property="delegate" destination="134" id="7302"/>
+                                                                                                </connections>
+                                                                                            </menu>
+                                                                                        </popUpButtonCell>
+                                                                                        <connections>
+                                                                                            <action selector="chooseQueryHistory:" target="134" id="7326"/>
+                                                                                            <binding destination="1907" name="hidden" keyPath="values.CustomQueryMaxHistoryItems" id="7290">
+                                                                                                <dictionary key="options">
+                                                                                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                                                                </dictionary>
+                                                                                            </binding>
                                                                                         </connections>
                                                                                     </popUpButton>
                                                                                 </subviews>
@@ -1848,7 +1846,7 @@ Gw
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Nr9-eI-xLJ">
                                                                             <rect key="frame" x="0.0" y="0.0" width="672" height="74"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textView editable="NO" drawsBackground="NO" importsGraphics="NO" horizontallyResizable="YES" verticallyResizable="YES" usesFontPanel="YES" allowsNonContiguousLayout="YES" id="8248">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="672" height="74"/>
@@ -1920,14 +1918,14 @@ Gw
                                                                         <rect key="frame" x="109" y="0.0" width="554" height="73"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" id="fhZ-nZ-AwI">
-                                                                            <rect key="frame" x="1" y="1" width="537" height="71"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <rect key="frame" x="1" y="1" width="541" height="71"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="panel" continuousSpellChecking="YES" smartInsertDelete="YES" id="8236">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="549" height="71"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="553" height="71"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                    <size key="minSize" width="537" height="71"/>
+                                                                                    <size key="minSize" width="541" height="71"/>
                                                                                     <size key="maxSize" width="1097" height="10000000"/>
                                                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <connections>
@@ -1965,14 +1963,14 @@ Gw
                                                                         <rect key="frame" x="109" y="0.0" width="554" height="200"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" id="nV8-ly-BSi">
-                                                                            <rect key="frame" x="1" y="1" width="537" height="198"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <rect key="frame" x="1" y="1" width="541" height="198"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" id="8242" customClass="SPTextView">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="549" height="198"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="553" height="198"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                    <size key="minSize" width="537" height="198"/>
+                                                                                    <size key="minSize" width="541" height="198"/>
                                                                                     <size key="maxSize" width="1097" height="10000000"/>
                                                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <connections>
@@ -2295,7 +2293,7 @@ Gw
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="EaV-iG-q8t">
                                                             <rect key="frame" x="1" y="0.0" width="694" height="475"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <tableView identifier="TableRelationsTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="5545" id="5548" customClass="SPCopyTable">
                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="458"/>
@@ -2482,7 +2480,7 @@ Gw
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="tlh-Sg-Saf">
                                                             <rect key="frame" x="1" y="0.0" width="694" height="475"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <tableView identifier="TableTriggersTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="6704" id="6701" customClass="SPCopyTable">
                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="458"/>
@@ -5085,11 +5083,15 @@ Gw
         <image name="button_refresh" width="30" height="22"/>
         <image name="button_remove" width="30" height="22"/>
         <image name="button_right" width="30" height="22"/>
+        <image name="clear" width="16" height="16"/>
         <image name="csv_file" width="12" height="15"/>
         <image name="database-small" width="16" height="16"/>
         <image name="database_add_16px" width="16" height="16"/>
         <image name="export_file" width="16" height="16"/>
         <image name="grabber-horizontal" width="10" height="8"/>
+        <image name="history_file" width="16" height="16"/>
+        <image name="page_save" width="16" height="16"/>
+        <image name="save" width="16" height="16"/>
         <image name="sql_file" width="13" height="16"/>
         <image name="xml_file" width="12" height="15"/>
     </resources>

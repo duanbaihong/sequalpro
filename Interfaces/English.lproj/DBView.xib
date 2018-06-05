@@ -1465,7 +1465,7 @@
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <clipView key="contentView" id="npE-bg-ppa">
                                                                                             <rect key="frame" x="1" y="1" width="694" height="140"/>
-                                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
                                                                                                 <textView focusRingType="none" importsGraphics="NO" richText="NO" horizontallyResizable="YES" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" usesRuler="YES" id="8254" customClass="SPTextView">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="140"/>
@@ -1681,8 +1681,8 @@ Gw
                                                                                             <action selector="chooseQueryFavorite:" target="134" id="7316"/>
                                                                                         </connections>
                                                                                     </popUpButton>
-                                                                                    <popUpButton toolTip="Choose a query from your recent queries (⌥⌘Y)" verticalHuggingPriority="750" id="7217">
-                                                                                        <rect key="frame" x="177" y="213" width="145" height="22"/>
+                                                                                    <popUpButton toolTip="Choose a query from your recent queries (⌥⌘Y)" verticalHuggingPriority="750" misplaced="YES" id="7217">
+                                                                                        <rect key="frame" x="177" y="213" width="119" height="22"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                         <popUpButtonCell key="cell" type="recessed" title="Query History" bezelStyle="recessed" alignment="center" controlSize="small" lineBreakMode="clipping" borderStyle="borderAndBezel" inset="2" pullsDown="YES" preferredEdge="maxY" selectedItem="7273" id="7271">
                                                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
@@ -1691,20 +1691,20 @@ Gw
                                                                                             <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                                                                             <menu key="menu" title="OtherViews" id="7272">
                                                                                                 <items>
-                                                                                                    <menuItem title="Query History" hidden="YES" id="7273"/>
-                                                                                                    <menuItem title="Copy History" tag="300000" toolTip="Copy all history items onto the clipboard." id="7279">
+                                                                                                    <menuItem title="Query History" image="history_file" hidden="YES" id="7273"/>
+                                                                                                    <menuItem title="Copy History" image="page_save" tag="300000" toolTip="Copy all history items onto the clipboard." id="7279">
                                                                                                         <modifierMask key="keyEquivalentModifierMask" option="YES"/>
                                                                                                         <connections>
                                                                                                             <action selector="copyQueryHistory:" target="134" id="7312"/>
                                                                                                         </connections>
                                                                                                     </menuItem>
-                                                                                                    <menuItem title="Save History…" tag="300001" alternate="YES" toolTip="Save all history items to file. Press ⌥ to copy all history items onto the clipboard." id="7276">
+                                                                                                    <menuItem title="Save History…" image="save" tag="300001" alternate="YES" toolTip="Save all history items to file. Press ⌥ to copy all history items onto the clipboard." id="7276">
                                                                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                                                                         <connections>
                                                                                                             <action selector="saveQueryHistory:" target="134" id="7324"/>
                                                                                                         </connections>
                                                                                                     </menuItem>
-                                                                                                    <menuItem title="Clear History" tag="300002" id="7277">
+                                                                                                    <menuItem title="Clear History" image="clear" tag="300002" id="7277">
                                                                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                                                                         <connections>
                                                                                                             <action selector="clearQueryHistory:" target="134" id="7311"/>
@@ -1738,7 +1738,7 @@ Gw
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <clipView key="contentView" id="NVV-XL-mVZ">
                                                                                             <rect key="frame" x="1" y="0.0" width="694" height="213"/>
-                                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
                                                                                                 <tableView identifier="CustomQueryResultsTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="7227" id="7224" customClass="SPCopyTable">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="196"/>
@@ -1782,8 +1782,8 @@ Gw
                                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                                         </tableHeaderView>
                                                                                     </scrollView>
-                                                                                    <popUpButton verticalHuggingPriority="750" id="8316" customClass="SPComboPopupButton">
-                                                                                        <rect key="frame" x="508" y="213" width="180" height="22"/>
+                                                                                    <popUpButton verticalHuggingPriority="750" misplaced="YES" id="8316" customClass="SPComboPopupButton">
+                                                                                        <rect key="frame" x="553" y="213" width="142" height="22"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                                         <popUpButtonCell key="cell" type="roundRect" title="Run Current" bezelStyle="roundedRect" alignment="center" controlSize="small" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" pullsDown="YES" selectedItem="8319" id="8317" customClass="SPComboPopupButtonCell">
                                                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1846,7 +1846,7 @@ Gw
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Nr9-eI-xLJ">
                                                                             <rect key="frame" x="0.0" y="0.0" width="672" height="74"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textView editable="NO" drawsBackground="NO" importsGraphics="NO" horizontallyResizable="YES" verticallyResizable="YES" usesFontPanel="YES" allowsNonContiguousLayout="YES" id="8248">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="672" height="74"/>
@@ -5054,11 +5054,15 @@ Gw
         <image name="button_refresh" width="30" height="22"/>
         <image name="button_remove" width="30" height="22"/>
         <image name="button_right" width="30" height="22"/>
+        <image name="clear" width="16" height="16"/>
         <image name="csv_file" width="12" height="15"/>
         <image name="database-small" width="16" height="16"/>
         <image name="database_add_16px" width="16" height="16"/>
         <image name="export_file" width="16" height="16"/>
         <image name="grabber-horizontal" width="10" height="8"/>
+        <image name="history_file" width="16" height="16"/>
+        <image name="page_save" width="16" height="16"/>
+        <image name="save" width="16" height="16"/>
         <image name="sql_file" width="13" height="16"/>
         <image name="xml_file" width="12" height="15"/>
     </resources>

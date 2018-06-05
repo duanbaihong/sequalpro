@@ -2908,8 +2908,10 @@
 	NSUInteger numberOfHistoryItems = [[SPQueryController sharedQueryController] numberOfHistoryItemsForFileURL:[tableDocumentInstance fileURL]];
 	if(numberOfHistoryItems>0)
 		for(id historyMenuItem in [[SPQueryController sharedQueryController] historyMenuItemsForFileURL:[tableDocumentInstance fileURL]])
+		{
+			[historyMenuItem setImage:[NSImage imageNamed:@"s_sql"]];
 			[historyMenu addItem:historyMenuItem];
-
+		}
 	// Reapply the filter
 	[self filterQueryHistory:nil];
 }
