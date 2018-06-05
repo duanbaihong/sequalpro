@@ -262,16 +262,16 @@
                                                 <popUpButton toolTip="选择一个数据库视图 (⇧⌘D)" verticalHuggingPriority="750" misplaced="YES" allowsExpansionToolTips="YES" mirrorLayoutDirectionWhenInternationalizing="never" id="3mC-m9-PRY">
                                                     <rect key="frame" x="2" y="331" width="210" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                    <popUpButtonCell key="cell" type="roundTextured" title="选择数据库..." bezelStyle="texturedRounded" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" baseWritingDirection="leftToRight" inset="2" selectedItem="Y16-Su-cwE" id="lPY-rT-YwV">
+                                                    <popUpButtonCell key="cell" type="roundTextured" title="choose database..." bezelStyle="texturedRounded" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" baseWritingDirection="leftToRight" inset="2" selectedItem="Y16-Su-cwE" id="lPY-rT-YwV">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="menu"/>
                                                         <menu key="menu" title="OtherViews" id="zi6-ZL-bky">
                                                             <items>
-                                                                <menuItem title="选择数据库..." state="on" image="database-small" id="Y16-Su-cwE">
+                                                                <menuItem title="choose database..." state="on" image="database-small" id="Y16-Su-cwE">
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                 </menuItem>
                                                                 <menuItem isSeparatorItem="YES" id="IiV-UM-f1s"/>
-                                                                <menuItem title="添加数据库..." image="database_add_16px" alternate="YES" toolTip="添加数据库..." id="rfL-1v-0Ox">
+                                                                <menuItem title="add database..." image="database_add_16px" alternate="YES" toolTip="添加数据库..." id="rfL-1v-0Ox">
                                                                     <modifierMask key="keyEquivalentModifierMask"/>
                                                                     <connections>
                                                                         <action selector="addDatabase:" target="-1" id="fMr-gD-0cl"/>
