@@ -527,7 +527,7 @@
 								NSString *data = [[NSString alloc] initWithData:object encoding:[self exportOutputEncoding]];
 								
 								if (data == nil) {
-#warning This can corrupt data! Check if this case ever happens and if so, export as hex-string
+//#warning This can corrupt data! Check if this case ever happens and if so, export as hex-string
 									data = [[NSString alloc] initWithData:object encoding:NSASCIIStringEncoding];
 								}
 								

@@ -43,7 +43,7 @@
  * Pass in the third parameter to receive the length of the converted string (INCLUDING
  * the terminating \0 character), or pass in NULL if you do not want this information.
  */
-#warning This method doesn't make sense. It's only addition over [str dataUsingEncoding:allowLossyConversion:] is the terminating NUL byte. \
+//#warning This method doesn't make sense. It's only addition over [str dataUsingEncoding:allowLossyConversion:] is the terminating NUL byte. \
          But the "string" can already contain NUL bytes, so it's not a valid c string anyway.
 + (const char *)_cStringForString:(NSString *)aString usingEncoding:(NSStringEncoding)anEncoding returningLengthAs:(NSUInteger *)cStringLengthPointer
 {

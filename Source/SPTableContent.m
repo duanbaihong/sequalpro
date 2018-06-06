@@ -968,7 +968,7 @@ static void *TableContentKVOContext = &TableContentKVOContext;
 	[theResultStore startDownload];
 
 #ifndef SP_CODA
-#warning private ivar accessed from outside
+//#warning private ivar accessed from outside
 	NSProgressIndicator *dataLoadingIndicator = [tableDocumentInstance valueForKey:@"queryProgressBar"];
 #else
 	NSProgressIndicator *dataLoadingIndicator = [tableDocumentInstance queryProgressBar];
@@ -3335,7 +3335,7 @@ static void *TableContentKVOContext = &TableContentKVOContext;
  */
 - (CGFloat) tablesListWidth
 {
-#warning private ivar accessed from outside
+//#warning private ivar accessed from outside
 	return [[[[tableDocumentInstance valueForKey:@"contentViewSplitter"] subviews] objectAtIndex:0] frame].size.width;
 }
 
@@ -3535,7 +3535,7 @@ static void *TableContentKVOContext = &TableContentKVOContext;
 		[tableDataInstance setStatusValue:@"y" forKey:@"RowsCountAccurate"];
 #ifndef SP_CODA
 		[[tableInfoInstance onMainThread] tableChanged:nil];
-#warning private ivar accessed from outside
+//#warning private ivar accessed from outside
 		[[[tableDocumentInstance valueForKey:@"extendedTableInfoInstance"] onMainThread] loadTable:selectedTable];
 #endif
 

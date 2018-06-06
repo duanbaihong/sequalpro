@@ -197,7 +197,7 @@ static NSString *SPSaveDocumentAction = @"SPSaveDocument";
 
 - (IBAction)printDocument:(id)sender
 {
-#warning duplicate code with -[SPDatabaseDocument webView:didFinishLoadForFrame:]
+//#warning duplicate code with -[SPDatabaseDocument webView:didFinishLoadForFrame:]
 	NSPrintInfo *printInfo = [NSPrintInfo sharedPrintInfo];
 
 	NSSize paperSize = [printInfo paperSize];

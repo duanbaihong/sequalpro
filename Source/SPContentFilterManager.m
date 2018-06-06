@@ -217,12 +217,12 @@ static NSString *SPExportFilterAction = @"SPExportFilter";
  */
 - (id)customQueryInstance
 {
-#warning private ivar accessed from outside
+//#warning private ivar accessed from outside
 	return [tableDocumentInstance valueForKey:@"customQueryInstance"];
 }
 
-#pragma mark -
-#pragma mark IBAction methods
+//#pragma mark -
+//#pragma mark IBAction methods
 
 /**
  * Adds/Inserts a content filter

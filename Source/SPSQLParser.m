@@ -250,7 +250,7 @@
 			case CHAR_DQUOTE:
 			case CHAR_BTICK:
 			{
-#warning duplicate code with -endIndexOfStringQuotedByCharacter:startingIndex:
+//#warning duplicate code with -endIndexOfStringQuotedByCharacter:startingIndex:
 				NSUInteger innerStringIndex;
 				for (innerStringIndex = currentStringIndex + 1; innerStringIndex < stringLength; innerStringIndex++) {
 					unichar innerCharacter = CFStringGetCharacterAtIndex((CFStringRef) queryString, innerStringIndex);

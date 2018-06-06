@@ -912,7 +912,7 @@
 		dataBufferLength = [csvDataBuffer length];
 		for ( ; dataBufferPosition < dataBufferLength || allDataRead; dataBufferPosition++) {
 			if (csvDataBufferBytes[dataBufferPosition] == 0x0A || csvDataBufferBytes[dataBufferPosition] == 0x0D || allDataRead) {
-#warning This EOL detection logic will break for multibyte encodings (like UTF16)!
+//#warning This EOL detection logic will break for multibyte encodings (like UTF16)!
 				// Keep reading through any other line endings
 				while (dataBufferPosition + 1 < dataBufferLength
 						&& (csvDataBufferBytes[dataBufferPosition+1] == 0x0A
@@ -1150,7 +1150,7 @@
 
 						rowsImported++;
 						csvRowsThisQuery++;
-#warning Updating the UI for every single row is likely a performance killer (even without synchronization).
+//#warning Updating the UI for every single row is likely a performance killer (even without synchronization).
 						SPMainQSync(^{
 							if (fileIsCompressed) {
 								[singleProgressBar setDoubleValue:[csvFileHandle realDataReadLength]];
@@ -1183,7 +1183,7 @@
 								NSLocalizedString(@"[ERROR in row %ld] %@\n", @"error text when reading of csv file gave errors"),
 								(long)(rowsImported+1),[mySQLConnection lastErrorMessage]];
 						}
-#warning duplicate code (see above)
+//#warning duplicate code (see above)
 						rowsImported++;
 						SPMainQSync(^{
 							if (fileIsCompressed) {
@@ -1197,7 +1197,7 @@
 					}
 				} else {
 					rowsImported += csvRowsThisQuery;
-#warning duplicate code (see above)
+//#warning duplicate code (see above)
 					SPMainQSync(^{
 						if (fileIsCompressed) {
 							[singleProgressBar setDoubleValue:[csvFileHandle realDataReadLength]];

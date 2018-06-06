@@ -102,7 +102,7 @@ const SPMySQLResultCharset SPMySQLCharsetMap[] =
 	{57,  "cp1256", "cp1256_general_ci", 1, 1},
 	{58,  "cp1257", "cp1257_bin", 1, 1},
 	{59,  "cp1257", "cp1257_general_ci", 1, 1},
-#warning 60 is "utf32_general_ci" and "armascii8" is at 64 in mysql 5.5.59!?
+//#warning 60 is "utf32_general_ci" and "armascii8" is at 64 in mysql 5.5.59!?
 	{60,  "armascii8", "armascii8_bin", 1, 1},
 
 	{63,  "binary", "binary", 1, 1},

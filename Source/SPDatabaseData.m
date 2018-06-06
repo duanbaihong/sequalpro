@@ -129,7 +129,7 @@ NSInteger _sortStorageEngineEntry(NSDictionary *itemOne, NSDictionary *itemTwo, 
 			// If that failed, get the list of collations from the hard-coded list
 			if (![collations count]) {
 				const SPDatabaseCharSets *c = SPGetDatabaseCharacterSets();
-#warning This probably won't work as intended. See my comment in getDatabaseCollationsForEncoding:
+//#warning This probably won't work as intended. See my comment in getDatabaseCollationsForEncoding:
 				do {
 					[collations addObject:@{
 						@"ID"                 : @(c->nr),
@@ -187,7 +187,7 @@ NSInteger _sortStorageEngineEntry(NSDictionary *itemOne, NSDictionary *itemTwo, 
 			// If that failed, get the list of collations matching the supplied encoding from the hard-coded list
 			if (![characterSetCollations count]) {
 				const SPDatabaseCharSets *c = SPGetDatabaseCharacterSets();
-#warning I don't think this will work. The hardcoded list is supposed to be used with pre 4.1 mysql servers, \
+//#warning I don't think this will work. The hardcoded list is supposed to be used with pre 4.1 mysql servers, \
          which don't have information_schema or SHOW COLLATION. But before 4.1 there were no real collations and \
          even the charsets had different names (e.g. charset "latin1_de" which now is "latin1" + "latin1_german2_ci")
 				do {
@@ -232,7 +232,7 @@ copy_return:
 		if ((defaultCollationForCharacterSet == nil) || (![characterSetEncoding isEqualToString:encoding])) {
 			NSArray *cols = [self getDatabaseCollationsForEncoding:encoding]; //will clear stored encoding and collation if neccesary
 			for (NSDictionary *collation in cols) {
-#warning This won't work for the hardcoded list (see above)
+//#warning This won't work for the hardcoded list (see above)
 				if([[[collation objectForKey:@"IS_DEFAULT"] lowercaseString] isEqualToString:@"yes"]) {
 					defaultCollationForCharacterSet = [[NSString alloc] initWithString:[collation objectForKey:@"COLLATION_NAME"]];
 					break;
@@ -379,7 +379,7 @@ copy_return:
 			// If that failed, get the list of character set encodings from the hard-coded list
 			if (![characterSetEncodings count]) {			
 				const SPDatabaseCharSets *c = SPGetDatabaseCharacterSets();
-#warning This probably won't work as intended. See my comment in getDatabaseCollationsForEncoding:
+//#warning This probably won't work as intended. See my comment in getDatabaseCollationsForEncoding:
 				do {
 					[characterSetEncodings addObject:@{
 						@"CHARACTER_SET_NAME" : [NSString stringWithCString:c->name encoding:NSUTF8StringEncoding],

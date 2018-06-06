@@ -103,7 +103,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
 				iconImage = [iconImages objectAtIndex:0];
 			}
 
-#warning This can cause a runtime error: "This application is assuming that a particular image contains an NSBitmapImageRep, which is not a good assumption.  We are instantiating a bitmap so that whatever this is keeps working, but please do not do this. (...)  This may break in the future."
+//#warning This can cause a runtime error: "This application is assuming that a particular image contains an NSBitmapImageRep, which is not a good assumption.  We are instantiating a bitmap so that whatever this is keeps working, but please do not do this. (...)  This may break in the future."
 			// TODO: draw the image into a bitmap context and grab the jpeg representation?
 			NSData *image = [iconImage TIFFRepresentation];
 
