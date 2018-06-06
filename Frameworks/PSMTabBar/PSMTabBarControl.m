@@ -670,7 +670,7 @@
 		cellRect.size.height = 0;
 		cellRect.origin.y = lastCellFrame.origin.y + lastCellFrame.size.height;
 	}
-	
+//	NSLog(item);
     [cell setRepresentedObject:item];
 	[cell setFrame:cellRect];
     

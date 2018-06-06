@@ -95,17 +95,20 @@ typedef struct {
 		NSBundle *bundle = [PSMTabBarControl bundle];
 
         sequelProCloseButton = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"SequelProTabClose"]];
-        sequelProCloseButtonDown = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"SequelProTabClose_Pressed"]];
-        sequelProCloseButtonOver = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"SequelProTabClose_Rollover"]];
-
+		sequelProCloseButtonDown = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"SequelProTabClose_Pressed"]];
+		sequelProCloseButtonOver = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"SequelProTabClose_Rollover"]];
+//		sequelProCloseButton = [NSImage imageNamed:@"SequelProTabClose"];
+//        sequelProCloseButtonDown = [NSImage imageNamed:@"SequelProTabClose_Pressed"];
+//        sequelProCloseButtonOver = [NSImage imageNamed:@"SequelProTabClose_Rollover"];
+//		NSLog(@"%f",[sequelProCloseButton size]);
         sequelProCloseDirtyButton = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"SequelProTabDirty"]];
         sequelProCloseDirtyButtonDown = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"SequelProTabDirty_Pressed"]];
         sequelProCloseDirtyButtonOver = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"SequelProTabDirty_Rollover"]];
                 
         _addTabButtonImage = [NSImage imageNamed:@"button_add"];
-//		_addTabButtonImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"AddTabButton"]];
-//		_addTabButtonPressedImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"AddTabButton"]];
-//		_addTabButtonRolloverImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"AddTabButton"]];
+//		_addTabButtonImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"button_add"]];
+//		_addTabButtonPressedImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"button_add"]];
+//		_addTabButtonRolloverImage = [[NSImage alloc] initByReferencingFile:[bundle pathForImageResource:@"button_add"]];
 		_addTabButtonPressedImage = [NSImage imageNamed:@"button_add"];
 		_addTabButtonRolloverImage = [NSImage imageNamed:@"button_add"];
 		
@@ -124,10 +127,9 @@ typedef struct {
     [sequelProCloseDirtyButton release];
     [sequelProCloseDirtyButtonDown release];
     [sequelProCloseDirtyButtonOver release];
-    [_addTabButtonImage release];
-    [_addTabButtonPressedImage release];
-    [_addTabButtonRolloverImage release];
-    
+//    [_addTabButtonImage release];
+//    [_addTabButtonPressedImage release];
+//    [_addTabButtonRolloverImage release];
 	[_objectCountStringAttributes release];
 	
     [super dealloc];
@@ -207,10 +209,11 @@ typedef struct {
     }
     
     NSRect result;
-    result.size = [sequelProCloseButton size];
+//    result.size = [sequelProCloseButton size];
+	CGSize size={17,17};
+	result.size = size;
     result.origin.x = cellFrame.origin.x + MARGIN_X;
-    result.origin.y = cellFrame.origin.y + MARGIN_Y + 2.0f;
-    
+    result.origin.y = cellFrame.origin.y + MARGIN_Y;
     return result;
 }
 
@@ -230,7 +233,6 @@ typedef struct {
     if ([cell hasCloseButton] && ![cell isCloseButtonSuppressed]) {
         result.origin.x += [sequelProCloseButton size].width + kPSMTabBarCellPadding;
     }
-	
     return result;
 }
 

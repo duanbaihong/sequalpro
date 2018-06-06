@@ -551,6 +551,7 @@
 - (IBAction)viewStatus:(id)sender;
 - (IBAction)viewRelations:(id)sender;
 - (IBAction)viewTriggers:(id)sender;
+- (IBAction)viewServerInfo:(id)sender;
 #endif
 
 - (void)setStructureRequiresReload:(BOOL)reload;

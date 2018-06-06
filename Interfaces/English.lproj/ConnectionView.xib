@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <development version="5100" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SPConnectionController">
@@ -189,7 +189,7 @@
                                                 <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                 <tableColumns>
-                                                    <tableColumn width="197" minWidth="40" maxWidth="1000" id="4915">
+                                                    <tableColumn identifier="" width="197" minWidth="40" maxWidth="1000" id="4915">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Favorites">
                                                             <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1626,7 +1626,7 @@ DQ
                             <rect key="frame" x="0.0" y="0.0" width="578" height="293"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <textView editable="NO" drawsBackground="NO" importsGraphics="NO" id="5434">
+                                <textView editable="NO" drawsBackground="NO" importsGraphics="NO" verticallyResizable="NO" id="5434">
                                     <rect key="frame" x="0.0" y="0.0" width="578" height="293"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="textColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -1846,7 +1846,219 @@ DQ
                                                 </paragraphStyle>
                                             </attributes>
                                         </fragment>
-                                        <fragment content=" lamet, ">
+                                        <fragment content=" lamet">
+                                            <attributes>
+                                                <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" metaFont="label"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops>
+                                                        <textTab alignment="left" location="0.0">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="56">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="112">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="168">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="224">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="280">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="336">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="392">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="448">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="504">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="560">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="616">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="672">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="728">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="784">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="840">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="896">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="952">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1008">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1064">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1120">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1176">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1232">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1288">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1344">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1400">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1456">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1512">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1568">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1624">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1680">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1736">
+                                                            <options/>
+                                                        </textTab>
+                                                    </tabStops>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=",">
+                                            <attributes>
+                                                <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="10" name=".PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops>
+                                                        <textTab alignment="left" location="0.0">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="56">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="112">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="168">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="224">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="280">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="336">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="392">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="448">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="504">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="560">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="616">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="672">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="728">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="784">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="840">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="896">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="952">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1008">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1064">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1120">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1176">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1232">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1288">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1344">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1400">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1456">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1512">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1568">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1624">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1680">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1736">
+                                                            <options/>
+                                                        </textTab>
+                                                    </tabStops>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" ">
                                             <attributes>
                                                 <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" metaFont="label"/>
@@ -2058,7 +2270,219 @@ DQ
                                                 </paragraphStyle>
                                             </attributes>
                                         </fragment>
-                                        <fragment content=" cillium adipisicing pecu, sed do ">
+                                        <fragment content=" cillium adipisicing pecu">
+                                            <attributes>
+                                                <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" metaFont="label"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops>
+                                                        <textTab alignment="left" location="0.0">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="56">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="112">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="168">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="224">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="280">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="336">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="392">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="448">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="504">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="560">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="616">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="672">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="728">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="784">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="840">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="896">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="952">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1008">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1064">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1120">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1176">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1232">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1288">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1344">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1400">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1456">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1512">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1568">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1624">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1680">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1736">
+                                                            <options/>
+                                                        </textTab>
+                                                    </tabStops>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=",">
+                                            <attributes>
+                                                <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="10" name=".PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops>
+                                                        <textTab alignment="left" location="0.0">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="56">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="112">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="168">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="224">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="280">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="336">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="392">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="448">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="504">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="560">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="616">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="672">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="728">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="784">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="840">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="896">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="952">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1008">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1064">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1120">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1176">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1232">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1288">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1344">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1400">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1456">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1512">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1568">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1624">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1680">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1736">
+                                                            <options/>
+                                                        </textTab>
+                                                    </tabStops>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" sed do ">
                                             <attributes>
                                                 <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" metaFont="label"/>
@@ -2270,8 +2694,644 @@ DQ
                                                 </paragraphStyle>
                                             </attributes>
                                         </fragment>
+                                        <fragment content=" tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam">
+                                            <attributes>
+                                                <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" metaFont="label"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops>
+                                                        <textTab alignment="left" location="0.0">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="56">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="112">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="168">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="224">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="280">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="336">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="392">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="448">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="504">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="560">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="616">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="672">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="728">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="784">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="840">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="896">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="952">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1008">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1064">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1120">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1176">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1232">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1288">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1344">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1400">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1456">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1512">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1568">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1624">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1680">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1736">
+                                                            <options/>
+                                                        </textTab>
+                                                    </tabStops>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=",">
+                                            <attributes>
+                                                <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="10" name=".PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops>
+                                                        <textTab alignment="left" location="0.0">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="56">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="112">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="168">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="224">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="280">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="336">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="392">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="448">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="504">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="560">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="616">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="672">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="728">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="784">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="840">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="896">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="952">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1008">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1064">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1120">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1176">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1232">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1288">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1344">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1400">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1456">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1512">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1568">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1624">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1680">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1736">
+                                                            <options/>
+                                                        </textTab>
+                                                    </tabStops>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
                                         <fragment>
-                                            <mutableString key="content"> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Et harumd und lookum like Greek to me, dereud facilis est er expedit distinct. Nam liber te conscient to factor tum poen legum odioque civiuda</mutableString>
+                                            <string key="content"> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</string>
+                                            <attributes>
+                                                <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" metaFont="label"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops>
+                                                        <textTab alignment="left" location="0.0">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="56">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="112">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="168">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="224">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="280">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="336">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="392">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="448">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="504">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="560">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="616">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="672">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="728">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="784">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="840">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="896">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="952">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1008">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1064">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1120">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1176">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1232">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1288">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1344">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1400">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1456">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1512">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1568">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1624">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1680">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1736">
+                                                            <options/>
+                                                        </textTab>
+                                                    </tabStops>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=",">
+                                            <attributes>
+                                                <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="10" name=".PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops>
+                                                        <textTab alignment="left" location="0.0">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="56">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="112">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="168">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="224">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="280">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="336">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="392">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="448">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="504">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="560">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="616">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="672">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="728">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="784">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="840">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="896">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="952">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1008">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1064">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1120">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1176">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1232">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1288">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1344">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1400">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1456">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1512">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1568">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1624">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1680">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1736">
+                                                            <options/>
+                                                        </textTab>
+                                                    </tabStops>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" sunt in culpa qui officia deserunt mollit anim id est laborum Et harumd und lookum like Greek to me">
+                                            <attributes>
+                                                <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" metaFont="label"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops>
+                                                        <textTab alignment="left" location="0.0">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="56">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="112">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="168">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="224">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="280">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="336">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="392">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="448">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="504">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="560">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="616">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="672">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="728">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="784">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="840">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="896">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="952">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1008">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1064">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1120">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1176">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1232">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1288">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1344">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1400">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1456">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1512">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1568">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1624">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1680">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1736">
+                                                            <options/>
+                                                        </textTab>
+                                                    </tabStops>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=",">
+                                            <attributes>
+                                                <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="10" name=".PingFangSC-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                    <tabStops>
+                                                        <textTab alignment="left" location="0.0">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="56">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="112">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="168">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="224">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="280">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="336">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="392">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="448">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="504">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="560">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="616">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="672">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="728">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="784">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="840">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="896">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="952">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1008">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1064">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1120">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1176">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1232">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1288">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1344">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1400">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1456">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1512">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1568">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1624">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1680">
+                                                            <options/>
+                                                        </textTab>
+                                                        <textTab alignment="left" location="1736">
+                                                            <options/>
+                                                        </textTab>
+                                                    </tabStops>
+                                                </paragraphStyle>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" dereud facilis est er expedit distinct. Nam liber te conscient to factor tum poen legum odioque civiuda">
                                             <attributes>
                                                 <color key="NSColor" red="0.90196078999999996" green="0.90196078999999996" blue="0.90196078999999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" metaFont="label"/>
@@ -2595,8 +3655,8 @@ DQ
         <image name="button_action" width="30" height="22"/>
         <image name="button_add" width="30" height="22"/>
         <image name="button_add_folder" width="30" height="22"/>
-        <image name="button_bar_handle" width="15" height="23"/>
-        <image name="button_bar_spacer" width="11" height="23"/>
+        <image name="button_bar_handle" width="11" height="23"/>
+        <image name="button_bar_spacer" width="10" height="23"/>
         <image name="key-icon" width="16" height="9"/>
         <image name="key-icon-alternate" width="16" height="9"/>
     </resources>

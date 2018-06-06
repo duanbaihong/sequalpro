@@ -4189,19 +4189,19 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		
 	} else if ([itemIdentifier isEqualToString:SPMainToolbarServerInfo]) {
 		[toolbarItem setLabel:NSLocalizedString(@"ServerInfo", @"ServerInfo")];
-		[toolbarItem setPaletteLabel:NSLocalizedString(@"ServerInfo", @"toolbar item label for switching to the ServerInfo tab")];
+		[toolbarItem setPaletteLabel:NSLocalizedString(@"ServerInfo", @"服务器信息")];
 		//set up tooltip and image
-		[toolbarItem setToolTip:NSLocalizedString(@"Switch to the ServerInfo tab", @"tooltip for toolbar item for switching to the ServerInfo tab")];
-		[toolbarItem setImage:[NSImage imageNamed:@"toolbar-switch-to-table-relations"]];
+		[toolbarItem setToolTip:NSLocalizedString(@"ServerInfoTooltip", @"tooltip for toolbar item for switching to the ServerInfo tab")];
+		[toolbarItem setImage:[NSImage imageNamed:@"serverinfo"]];
 		//set up the target action
 		[toolbarItem setTarget:self];
-		[toolbarItem setAction:@""];
+		[toolbarItem setAction:@selector(viewServerInfo:)];
 		
 	} else {
 		//itemIdentifier refered to a toolbar item that is not provided or supported by us or cocoa 
 		toolbarItem = nil;
 	}
-	NSLog(itemIdentifier);
+//	NSLog(itemIdentifier);
 	return toolbarItem;
 }
 
@@ -4316,7 +4316,9 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		return ([[SPQueryController sharedQueryController] consoleMessageCount] > 0);
 	}
 
-	if (![identifier isEqualToString:SPMainToolbarCustomQuery] && ![identifier isEqualToString:SPMainToolbarUserManager]) {
+	if (![identifier isEqualToString:SPMainToolbarCustomQuery]
+		&& ![identifier isEqualToString:SPMainToolbarUserManager]
+		&& ![identifier isEqualToString:SPMainToolbarServerInfo] ) {
 		return (([tablesListInstance tableType] == SPTableTypeTable) || ([tablesListInstance tableType] == SPTableTypeView));
 	}
 
@@ -6620,6 +6622,23 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 
 	[prefs setInteger:SPTriggersViewMode forKey:SPLastViewMode];
 }
+
+- (IBAction)viewServerInfo:(id)sender
+{
+	if (![self couldCommitCurrentViewActions]) {
+		[mainToolbar setSelectedItemIdentifier:*SPViewModeToMainToolbarMap[[prefs integerForKey:SPLastViewMode]]];
+		return;
+	}
+	
+	[tableTabView selectTabViewItemAtIndex:6];
+	[mainToolbar setSelectedItemIdentifier:SPMainToolbarServerInfo];
+	[spHistoryControllerInstance updateHistoryEntries];
+	
+	// Set the focus on the text field
+//	[parentWindow makeFirstResponder:customQueryTextView];
+	
+	[prefs setInteger:SPServerInfoViewMode forKey:SPLastViewMode];
+}
 #endif
 
 /**
@@ -6643,6 +6662,8 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		structureLoaded = !reload;
 	}
 }
+
+
 
 /**
  * Mark the content tab for refresh when it's next switched to,

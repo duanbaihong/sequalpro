@@ -342,6 +342,7 @@
 
 - (NSRect)closeButtonRectForFrame:(NSRect)cellFrame
 {
+//	NSLog(@"%@",[[(PSMTabBarControl *)_customControlView style] closeButtonRectForTabCell:self withFrame:cellFrame]);
     return [[(PSMTabBarControl *)_customControlView style] closeButtonRectForTabCell:self withFrame:cellFrame];
 }
 

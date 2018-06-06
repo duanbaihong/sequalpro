@@ -163,6 +163,10 @@
 		3F00931120C6922800A744C0 /* q_sql.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F00930F20C6922800A744C0 /* q_sql.png */; };
 		3F5E774F20C11AEC005AEEC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5E774E20C11AEC005AEEC4 /* Images.xcassets */; };
 		3F8FEAB920C65E4A00513F37 /* export_file.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F8FEAB620C65E4A00513F37 /* export_file.png */; };
+		3FA190DC20C7846F00873294 /* serverinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA190D920C7846E00873294 /* serverinfo.png */; };
+		3FA190DF20C78FF700873294 /* information_info_72px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA190DD20C78FF700873294 /* information_info_72px.png */; };
+		3FA190E020C78FF700873294 /* info_file.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA190DE20C78FF700873294 /* info_file.png */; };
+		3FA190E320C7A5B900873294 /* server_database_72px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA190E120C7A5B900873294 /* server_database_72px.png */; };
 		3FD266A620C63BFB007B2AF5 /* database_add_16px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD266A420C63BFB007B2AF5 /* database_add_16px.png */; };
 		3FD266A820C63C90007B2AF5 /* database_green_16px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD266A720C63C90007B2AF5 /* database_green_16px.png */; };
 		3FD266AA20C63E1B007B2AF5 /* database_add_16px1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD266A920C63E1B007B2AF5 /* database_add_16px1.png */; };
@@ -907,6 +911,10 @@
 		3F00930F20C6922800A744C0 /* q_sql.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = q_sql.png; sourceTree = "<group>"; };
 		3F5E774E20C11AEC005AEEC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Sequel Pro/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		3F8FEAB620C65E4A00513F37 /* export_file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = export_file.png; sourceTree = "<group>"; };
+		3FA190D920C7846E00873294 /* serverinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = serverinfo.png; sourceTree = "<group>"; };
+		3FA190DD20C78FF700873294 /* information_info_72px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = information_info_72px.png; sourceTree = "<group>"; };
+		3FA190DE20C78FF700873294 /* info_file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_file.png; sourceTree = "<group>"; };
+		3FA190E120C7A5B900873294 /* server_database_72px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = server_database_72px.png; sourceTree = "<group>"; };
 		3FA4E70E20BD399900333E38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "Interfaces/zh-Hans.lproj/AboutPanel.xib"; sourceTree = "<group>"; };
 		3FA4E70F20BD399900333E38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/BundleEditor.xib"; sourceTree = "<group>"; };
 		3FA4E71020BD399900333E38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/BundleHTMLOutput.xib"; sourceTree = "<group>"; };
@@ -2137,6 +2145,10 @@
 		17E6418B0EF01FF7001BC333 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3FA190E120C7A5B900873294 /* server_database_72px.png */,
+				3FA190DE20C78FF700873294 /* info_file.png */,
+				3FA190DD20C78FF700873294 /* information_info_72px.png */,
+				3FA190D920C7846E00873294 /* serverinfo.png */,
 				3F00930F20C6922800A744C0 /* q_sql.png */,
 				3F00930E20C6922800A744C0 /* s_sql.png */,
 				3F00930C20C690F900A744C0 /* save.png */,
@@ -2972,6 +2984,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA190DC20C7846F00873294 /* serverinfo.png in Resources */,
 				17B548731E82B02100175D5A /* button_edit_mode_selected@2x.png in Resources */,
 				3FD473A420C650BE00444437 /* sql_file.png in Resources */,
 				17E641D10EF02036001BC333 /* grabber-horizontal.png in Resources */,
@@ -2996,6 +3009,7 @@
 				17B548751E82B02100175D5A /* button_edit@2x.png in Resources */,
 				B58731280F838C9E00087794 /* PreferenceDefaults.plist in Resources */,
 				B52460DB0F8EF93B00171639 /* Console.xib in Resources */,
+				3FA190DF20C78FF700873294 /* information_info_72px.png in Resources */,
 				BC2C8E220FA8C2DB008468C7 /* SPMySQLHelpTemplate.html in Resources */,
 				384582C40FB95FF800DDACB6 /* func-small.png in Resources */,
 				384582C70FB9603600DDACB6 /* proc-small.png in Resources */,
@@ -3030,6 +3044,7 @@
 				BCB56197106F893F00167321 /* ContentFilters.plist in Resources */,
 				BCB5619B106F8A1B00167321 /* EditorQuickLookTypes.plist in Resources */,
 				BC675A17107203BA00C5ACD4 /* ContentFilterManager.xib in Resources */,
+				3FA190E020C78FF700873294 /* info_file.png in Resources */,
 				BC65C3B2107CE3EE003F7B02 /* ImportAccessory.xib in Resources */,
 				582A05A9108A5CCF0027D42B /* ProgressIndicatorLayer.xib in Resources */,
 				174CE11E10AB80B5008F892B /* DatabaseProcessList.xib in Resources */,
@@ -3039,6 +3054,7 @@
 				17CC993B10B4C9C80034CD7A /* License.rtf in Resources */,
 				58C3506510B9A56C00D37E14 /* button_left.png in Resources */,
 				58C3506710B9A57300D37E14 /* button_right.png in Resources */,
+				3FA190E320C7A5B900873294 /* server_database_72px.png in Resources */,
 				58C3506B10B9AA8B00D37E14 /* button_pagination.png in Resources */,
 				58C3507510B9ADEA00D37E14 /* ContentPaginationView.xib in Resources */,
 				BC30C011111C98BD002701C9 /* DataMigrationDialog.xib in Resources */,

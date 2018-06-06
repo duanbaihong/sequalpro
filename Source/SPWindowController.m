@@ -773,10 +773,10 @@ static SEL extracted() {
 		CGFloat cellWidth = [theCell width];
 		CGFloat titleWidth = [theCell stringSize].width;
 		CGFloat closeButtonWidth = 0;
-
+//		NSLog(@"%@",titleWidth);
 		if ([theCell hasCloseButton])
 			closeButtonWidth = [theCell closeButtonRectForFrame:[theCell frame]].size.width;
-
+//		NSLog(@"%lf",closeButtonWidth);
 		if (titleWidth > cellWidth - closeButtonWidth) {
 			return [theCell title];
 		}

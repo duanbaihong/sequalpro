@@ -42,7 +42,8 @@ typedef enum {
 	SPRelationsViewMode	  = 3,
 	SPTableInfoViewMode   = 4,
 	SPQueryEditorViewMode = 5,
-	SPTriggersViewMode    = 6
+	SPTriggersViewMode    = 6,
+	SPServerInfoViewMode  = 7
 } SPViewMode;
 
 // Query modes
