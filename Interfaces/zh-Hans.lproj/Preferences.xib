@@ -73,8 +73,9 @@
         </customObject>
         <customObject id="331" userLabel="Updater" customClass="SUUpdater"/>
         <userDefaultsController representsSharedInstance="YES" id="117"/>
-        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1" userLabel="PreferencesPanel">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES"/>
+        <window title="Preferences" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" tabbingMode="preferred" id="1" userLabel="PreferencesPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" participatesInCycle="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="430" y="486" width="580" height="172"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
@@ -86,7 +87,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="599"/>
             </connections>
-            <point key="canvasLocation" x="579" y="228"/>
+            <point key="canvasLocation" x="218" y="187"/>
         </window>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="1716" userLabel="Enter Name Sheet">
             <windowStyleMask key="styleMask" titled="YES"/>
@@ -329,10 +330,13 @@ Gw
                                     <modifierMask key="keyEquivalentModifierMask"/>
                                 </menuItem>
                                 <menuItem isSeparatorItem="YES" id="1450"/>
+                                <menuItem title="服务器信息" id="GFj-Ji-e1W">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
                                 <menuItem title="表结构" tag="1" id="1451">
                                     <modifierMask key="keyEquivalentModifierMask"/>
                                 </menuItem>
-                                <menuItem title="表内容" tag="2" keyEquivalent="e" id="1452">
+                                <menuItem title="表内容" tag="2" id="1452">
                                     <modifierMask key="keyEquivalentModifierMask"/>
                                 </menuItem>
                                 <menuItem title="表关系" tag="3" id="1453">
@@ -1113,7 +1117,7 @@ Warning: If Sequel Pro and the server do not have at least one cipher suite in c
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                     <clipView key="contentView" id="M9x-3Q-tiD">
                         <rect key="frame" x="1" y="1" width="332" height="126"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" autosaveColumns="NO" id="RuH-Yq-cdH">
                                 <rect key="frame" x="0.0" y="0.0" width="332" height="126"/>
@@ -1481,7 +1485,7 @@ Warning: If Sequel Pro and the server do not have at least one cipher suite in c
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="oEY-Qs-g9y">
                         <rect key="frame" x="1" y="1" width="220" height="286"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="20" id="1685">
                                 <rect key="frame" x="0.0" y="0.0" width="220" height="286"/>

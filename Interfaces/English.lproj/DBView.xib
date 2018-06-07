@@ -1465,7 +1465,7 @@
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <clipView key="contentView" id="npE-bg-ppa">
                                                                                             <rect key="frame" x="1" y="1" width="694" height="140"/>
-                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                            <autoresizingMask key="autoresizingMask"/>
                                                                                             <subviews>
                                                                                                 <textView focusRingType="none" importsGraphics="NO" richText="NO" horizontallyResizable="YES" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" usesRuler="YES" id="8254" customClass="SPTextView">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="140"/>
@@ -1738,7 +1738,7 @@ Gw
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <clipView key="contentView" id="NVV-XL-mVZ">
                                                                                             <rect key="frame" x="1" y="0.0" width="694" height="213"/>
-                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                            <autoresizingMask key="autoresizingMask"/>
                                                                                             <subviews>
                                                                                                 <tableView identifier="CustomQueryResultsTableView" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="16" headerView="7227" id="7224" customClass="SPCopyTable">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="694" height="196"/>
@@ -1846,7 +1846,7 @@ Gw
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Nr9-eI-xLJ">
                                                                             <rect key="frame" x="0.0" y="0.0" width="672" height="74"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
                                                                                 <textView editable="NO" drawsBackground="NO" importsGraphics="NO" horizontallyResizable="YES" verticallyResizable="YES" usesFontPanel="YES" allowsNonContiguousLayout="YES" id="8248">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="672" height="74"/>
@@ -4228,17 +4228,17 @@ Gw
             </view>
         </window>
         <customView misplaced="YES" id="3994" userLabel="Custom Toolbar Views">
-            <rect key="frame" x="0.0" y="0.0" width="64" height="32"/>
+            <rect key="frame" x="0.0" y="0.0" width="63" height="36"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
                 <segmentedControl verticalHuggingPriority="750" misplaced="YES" id="6293">
-                    <rect key="frame" x="0.0" y="3" width="57" height="25"/>
+                    <rect key="frame" x="4" y="5" width="57" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="momentary" id="6294">
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="automatic" trackingMode="momentary" id="6294">
                         <font key="font" metaFont="system"/>
                         <segments>
-                            <segment toolTip="Back" image="NSGoLeftTemplate" width="27" enabled="NO"/>
-                            <segment toolTip="Forward" image="NSGoRightTemplate" width="27" enabled="NO" tag="1"/>
+                            <segment toolTip="Back" image="NSGoLeftTemplate" width="25" enabled="NO"/>
+                            <segment toolTip="Forward" image="NSGoRightTemplate" width="25" enabled="NO" tag="1"/>
                         </segments>
                     </segmentedCell>
                     <connections>
@@ -4246,7 +4246,7 @@ Gw
                     </connections>
                 </segmentedControl>
             </subviews>
-            <point key="canvasLocation" x="-690" y="-436"/>
+            <point key="canvasLocation" x="-690.5" y="-434"/>
         </customView>
         <customView id="5999" userLabel="Title Icon View">
             <rect key="frame" x="0.0" y="0.0" width="110" height="20"/>

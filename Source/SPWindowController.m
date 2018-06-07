@@ -60,7 +60,8 @@
 - (void)awakeFromNib
 {
 	[self _switchOutSelectedTableDocument:nil];
-	
+	[[self window] setTitleVisibility:NSWindowTitleHidden];
+//	[[self window] setStyleMask:NSBorderlessWindowMask];
 	[[self window] setCollectionBehavior:[[self window] collectionBehavior] | NSWindowCollectionBehaviorFullScreenPrimary];
 
 	// Disable automatic cascading - this occurs before the size is set, so let the app
@@ -71,7 +72,6 @@
 	managedDatabaseConnections = [[NSMutableArray alloc] init];
 
 	[self _setUpTabBar];
-
 	// Retrieve references to the 'Close Window' and 'Close Tab' menus.  These are updated as window focus changes.
 	closeWindowMenuItem = [[[[NSApp mainMenu] itemWithTag:SPMainMenuFile] submenu] itemWithTag:SPMainMenuFileClose];
 	closeTabMenuItem = [[[[NSApp mainMenu] itemWithTag:SPMainMenuFile] submenu] itemWithTag:SPMainMenuFileCloseTab];
@@ -753,6 +753,7 @@ static SEL extracted() {
 	if (![theDocument isCustomQuerySelected] && [[[dragEvent draggingPasteboard] types] indexOfObject:NSStringPboardType] != NSNotFound)
 	{
 		[theDocument viewQuery:self];
+//		[theDocument viewServerInfo:self];
 	}
 }
 

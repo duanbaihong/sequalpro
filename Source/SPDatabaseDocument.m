@@ -584,6 +584,9 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 			case SPTriggersViewMode:
 				[self viewTriggers:self];
 				break;
+			case SPServerInfoViewMode:
+				[self viewServerInfo:self];
+				break;
 		}
 	}
 
@@ -4046,11 +4049,11 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 {
 	// create a new toolbar instance, and attach it to our document window
 	mainToolbar = [[NSToolbar alloc] initWithIdentifier:@"TableWindowToolbar"];
-
 	// set up toolbar properties
 	[mainToolbar setAllowsUserCustomization:YES];
 	[mainToolbar setAutosavesConfiguration:YES];
 	[mainToolbar setShowsBaselineSeparator:NO];
+//	[mainToolbar setAllowsExtensionItems:YES];
 	[mainToolbar setDisplayMode:NSToolbarDisplayModeIconAndLabel];
 
 	// set ourself as the delegate
@@ -4075,17 +4078,17 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 {
 	NSToolbarItem *toolbarItem = [[[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier] autorelease];
 
-	// if ([itemIdentifier isEqualToString:SPMainToolbarDatabaseSelection]) {
-	// 	[toolbarItem setLabel:NSLocalizedString(@"Select Database", @"toolbar item for selecting a db")];
-	// 	[toolbarItem setPaletteLabel:[toolbarItem label]];
-	// 	[toolbarItem setView:chooseDatabaseButton];
-	// 	[toolbarItem setMinSize:NSMakeSize(200,26)];
-	// 	[toolbarItem setMaxSize:NSMakeSize(200,32)];
-	// 	[chooseDatabaseButton setTarget:self];
-	// 	[chooseDatabaseButton setAction:@selector(chooseDatabase:)];
-	// 	[chooseDatabaseButton setEnabled:(_isConnected && !_isWorkingLevel)];
-
-	// } else
+//	 if ([itemIdentifier isEqualToString:SPMainToolbarDatabaseSelection]) {
+//	 	[toolbarItem setLabel:NSLocalizedString(@"Select Database", @"toolbar item for selecting a db")];
+//	 	[toolbarItem setPaletteLabel:[toolbarItem label]];
+//	 	[toolbarItem setView:chooseDatabaseButton];
+//	 	[toolbarItem setMinSize:NSMakeSize(200,26)];
+//	 	[toolbarItem setMaxSize:NSMakeSize(200,32)];
+//	 	[chooseDatabaseButton setTarget:self];
+//	 	[chooseDatabaseButton setAction:@selector(chooseDatabase:)];
+//	 	[chooseDatabaseButton setEnabled:(_isConnected && !_isWorkingLevel)];
+//
+//	 } else
 	if ([itemIdentifier isEqualToString:SPMainToolbarHistoryNavigation]) {
 		[toolbarItem setLabel:NSLocalizedString(@"Table History", @"toolbar item for navigation history")];
 		[toolbarItem setPaletteLabel:[toolbarItem label]];
@@ -4182,7 +4185,7 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		[toolbarItem setPaletteLabel:NSLocalizedString(@"Users", @"toolbar item label for switching to the User Manager tab")];
 		//set up tooltip and image
 		[toolbarItem setToolTip:NSLocalizedString(@"Switch to the User Manager tab", @"tooltip for toolbar item for switching to the User Manager tab")];
-		[toolbarItem setImage:[NSImage imageNamed:NSImageNameEveryone]];
+		[toolbarItem setImage:[NSImage imageNamed:@"user_manager"]];
 		//set up the target action
 		[toolbarItem setTarget:self];
 		[toolbarItem setAction:@selector(showUserManager:)];
@@ -4231,6 +4234,9 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 {
 	return @[
 		// SPMainToolbarDatabaseSelection,
+			 
+		SPMainToolbarHistoryNavigation,
+	    NSToolbarFlexibleSpaceItemIdentifier,
 		SPMainToolbarShowConsole,
 		SPMainToolbarClearConsole,
 		SPMainToolbarTableStructure,
@@ -4241,10 +4247,8 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 		SPMainToolbarTableTriggers,
 		SPMainToolbarUserManager,
 		NSToolbarCustomizeToolbarItemIdentifier,
-		NSToolbarFlexibleSpaceItemIdentifier,
 		NSToolbarSpaceItemIdentifier,
 		NSToolbarSeparatorItemIdentifier,
-		SPMainToolbarHistoryNavigation,
 		SPMainToolbarServerInfo
 	];
 }
@@ -4256,17 +4260,19 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 {
 	return @[
 		// SPMainToolbarDatabaseSelection,
+		
+		SPMainToolbarHistoryNavigation,
+		NSToolbarFlexibleSpaceItemIdentifier,
+		SPMainToolbarCustomQuery,
+		SPMainToolbarServerInfo,
 		SPMainToolbarTableStructure,
 		SPMainToolbarTableContent,
 		SPMainToolbarTableRelations,
 		SPMainToolbarTableTriggers,
 		SPMainToolbarTableInfo,
-		SPMainToolbarCustomQuery,
-		SPMainToolbarServerInfo,
-		NSToolbarFlexibleSpaceItemIdentifier,
 		SPMainToolbarUserManager,
 		SPMainToolbarShowConsole,
-		SPMainToolbarHistoryNavigation
+		NSToolbarFlexibleSpaceItemIdentifier
 	];
 }
 

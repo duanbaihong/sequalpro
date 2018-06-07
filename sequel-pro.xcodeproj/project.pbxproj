@@ -167,6 +167,7 @@
 		3FA190DF20C78FF700873294 /* information_info_72px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA190DD20C78FF700873294 /* information_info_72px.png */; };
 		3FA190E020C78FF700873294 /* info_file.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA190DE20C78FF700873294 /* info_file.png */; };
 		3FA190E320C7A5B900873294 /* server_database_72px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FA190E120C7A5B900873294 /* server_database_72px.png */; };
+		3FBECC5B20C8C75600C7371B /* user_manager.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBECC5820C8C75500C7371B /* user_manager.png */; };
 		3FD266A620C63BFB007B2AF5 /* database_add_16px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD266A420C63BFB007B2AF5 /* database_add_16px.png */; };
 		3FD266A820C63C90007B2AF5 /* database_green_16px.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD266A720C63C90007B2AF5 /* database_green_16px.png */; };
 		3FD266AA20C63E1B007B2AF5 /* database_add_16px1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD266A920C63E1B007B2AF5 /* database_add_16px1.png */; };
@@ -957,6 +958,7 @@
 		3FA4E73520BD39A400333E38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "zh-Hans"; path = "zh-Hans.lproj/SPQLPluginConnectionBundleWindowTemplate.html"; sourceTree = "<group>"; };
 		3FA4E73620BD39A400333E38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "zh-Hans"; path = "zh-Hans.lproj/SPQLPluginExportSettingsTemplate.html"; sourceTree = "<group>"; };
 		3FA4E73720BD39A400333E38 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "zh-Hans"; path = "zh-Hans.lproj/Credits.rtf"; sourceTree = "<group>"; };
+		3FBECC5820C8C75500C7371B /* user_manager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_manager.png; sourceTree = "<group>"; };
 		3FD266A420C63BFB007B2AF5 /* database_add_16px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = database_add_16px.png; sourceTree = "<group>"; };
 		3FD266A720C63C90007B2AF5 /* database_green_16px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = database_green_16px.png; sourceTree = "<group>"; };
 		3FD266A920C63E1B007B2AF5 /* database_add_16px1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = database_add_16px1.png; sourceTree = "<group>"; };
@@ -2145,6 +2147,7 @@
 		17E6418B0EF01FF7001BC333 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3FBECC5820C8C75500C7371B /* user_manager.png */,
 				3FA190E120C7A5B900873294 /* server_database_72px.png */,
 				3FA190DE20C78FF700873294 /* info_file.png */,
 				3FA190DD20C78FF700873294 /* information_info_72px.png */,
@@ -3074,6 +3077,7 @@
 				BCCB747A128D4FD100339E25 /* BundleEditor.xib in Resources */,
 				BC77C5E1129AA67F009AD832 /* BundleHTMLOutput.xib in Resources */,
 				3876E1541CC0B26700D85154 /* button_add_folder@2x.png in Resources */,
+				3FBECC5B20C8C75600C7371B /* user_manager.png in Resources */,
 				BC09D7DE12A786FB0030DB64 /* cancel-clicked-highlighted.png in Resources */,
 				BC09D7DF12A786FB0030DB64 /* cancel-clicked.png in Resources */,
 				BC09D7E012A786FB0030DB64 /* cancel-highlighted.png in Resources */,

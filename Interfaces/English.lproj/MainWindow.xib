@@ -25,9 +25,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="948" height="555"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView misplaced="YES" id="3" customClass="PSMTabBarControl">
-                        <rect key="frame" x="0.0" y="533" width="948" height="22"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <customView canDrawConcurrently="YES" misplaced="YES" id="3" customClass="PSMTabBarControl">
+                        <rect key="frame" x="0.0" y="534" width="948" height="22"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="delegate" destination="-2" id="12"/>
                             <outlet property="partnerView" destination="4" id="10"/>

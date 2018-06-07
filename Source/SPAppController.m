@@ -1423,6 +1423,7 @@
  */
 - (IBAction)openPreferences:(id)sender
 {
+	
 	[prefsController showWindow:self];	
 }
 

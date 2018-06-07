@@ -67,7 +67,7 @@
 - (void)windowDidLoad
 {		
 	[self _setupToolbar];
-
+	[self.window setTitleVisibility:NSWindowTitleHidden];
 	preferencePanes = [[NSArray alloc] initWithObjects:
 					   generalPreferencePane,
 					   tablesPreferencePane,
@@ -164,6 +164,7 @@
 
 	[tablesItem setLabel:[tablesPreferencePane preferencePaneName]];
 	[tablesItem setImage:[tablesPreferencePane preferencePaneIcon]];
+	[tablesItem setToolTip:[tablesPreferencePane preferencePaneToolTip]];
 	[tablesItem setTarget:self];
 	[tablesItem setAction:@selector(displayPreferencePane:)];
 
@@ -172,6 +173,7 @@
 
 	[notificationsItem setLabel:[notificationsPreferencePane preferencePaneName]];
 	[notificationsItem setImage:[notificationsPreferencePane preferencePaneIcon]];
+	[notificationsItem setToolTip:[notificationsPreferencePane preferencePaneToolTip]];
 	[notificationsItem setTarget:self];
 	[notificationsItem setAction:@selector(displayPreferencePane:)];
 
@@ -180,6 +182,7 @@
 	
 	[editorItem setLabel:[editorPreferencePane preferencePaneName]];
 	[editorItem setImage:[editorPreferencePane preferencePaneIcon]];
+	[editorItem setToolTip:[editorPreferencePane preferencePaneToolTip]];
 	[editorItem setTarget:self];
 	[editorItem setAction:@selector(displayPreferencePane:)];
 	
@@ -188,6 +191,7 @@
 
 	[autoUpdateItem setLabel:[autoUpdatePreferencePane preferencePaneName]];
 	[autoUpdateItem setImage:[autoUpdatePreferencePane preferencePaneIcon]];
+	[autoUpdateItem setToolTip:[autoUpdatePreferencePane preferencePaneToolTip]];
 	[autoUpdateItem setTarget:self];
 	[autoUpdateItem setAction:@selector(displayPreferencePane:)];
 
@@ -196,6 +200,7 @@
 
 	[networkItem setLabel:[networkPreferencePane preferencePaneName]];
 	[networkItem setImage:[networkPreferencePane preferencePaneIcon]];
+	[networkItem setToolTip:[networkPreferencePane preferencePaneToolTip]];
 	[networkItem setTarget:self];
 	[networkItem setAction:@selector(displayPreferencePane:)];
 
@@ -204,7 +209,7 @@
 	[toolbar setAllowsUserCustomization:NO];
 
 	[[self window] setToolbar:toolbar];
-	[[self window] setShowsToolbarButton:NO];
+	[[self window] setShowsToolbarButton:YES];
 
 	[self displayPreferencePane:nil];
 }
@@ -295,11 +300,13 @@
 			 SPPreferenceToolbarAutoUpdate,
 			 SPPreferenceToolbarNetwork
 			 ];
+	
 }
 
 - (NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar *)aToolbar
 {
 	return @[
+			 NSToolbarFlexibleSpaceItemIdentifier,
 			 SPPreferenceToolbarGeneral,
 			 SPPreferenceToolbarTables,
 			 SPPreferenceToolbarNotifications,
@@ -307,7 +314,7 @@
 			 SPPreferenceToolbarShortcuts,
 			 SPPreferenceToolbarAutoUpdate,
 			 SPPreferenceToolbarNetwork,
-//			 SPMainToolbarServerInfo
+			 NSToolbarFlexibleSpaceItemIdentifier
 			 ];
 }
 
