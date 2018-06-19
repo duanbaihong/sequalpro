@@ -1,6 +1,4 @@
 //
-//  $Id: PGPostgresConnection.m 3848 2012-09-12 12:19:31Z stuart02 $
-//
 //  PGPostgresConnection.m
 //  PostgresKit
 //
@@ -303,7 +301,6 @@ static void _PGPostgresConnectionNoticeProcessor(void *arg, const char *message)
 		int sock = PQsocket(_connection);
 
 		if (sock == -1) {
-			[pool release];
 			return;
 		}
 

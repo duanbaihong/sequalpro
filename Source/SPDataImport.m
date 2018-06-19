@@ -93,7 +93,7 @@
 		
 		prefs = nil;
 		lastFilename = nil;
-		_mainNibLoaded = NO;
+		mainNibLoaded = NO;
 	}
 	
 	return self;
@@ -101,8 +101,8 @@
 
 - (void)awakeFromNib
 {
-	if (_mainNibLoaded) return;
-	_mainNibLoaded = YES;
+	if (mainNibLoaded) return;
+	mainNibLoaded = YES;
 	
 	// Load the import accessory view, retaining a reference to the top-level objects that need releasing.
 	NSArray *importAccessoryTopLevelObjects = nil;
@@ -153,20 +153,6 @@
 	[[sender window] orderOut:self];
 }
 
-/**
- * Convenience method for closing and restoring the progress sheet to default state.
- */
-- (void)closeAndStopProgressSheet
-{
-	SPMainQSync(^{
-		[NSApp endSheet:singleProgressSheet];
-		[singleProgressBar setIndeterminate:YES];
-		[singleProgressSheet orderOut:nil];
-		[singleProgressBar stopAnimation:self];
-		[singleProgressBar setMaxValue:100];
-	});
-}
-
 #pragma mark -
 #pragma mark Import construction methods
 
@@ -175,9 +161,9 @@
  */
 - (void)importFromClipboard
 {
-
 	// clipboard textview with no wrapping
 	const CGFloat LargeNumberForText = 1.0e7f;
+	
 	[[importFromClipboardTextView textContainer] setContainerSize:NSMakeSize(LargeNumberForText, LargeNumberForText)];
 	[[importFromClipboardTextView textContainer] setWidthTracksTextView:NO];
 	[[importFromClipboardTextView textContainer] setHeightTracksTextView:NO];
@@ -220,7 +206,6 @@
  */
 - (void)importFromClipboardSheetDidEnd:(id)sheet returnCode:(NSInteger)returnCode contextInfo:(NSString *)contextInfo
 {
-
 	// Reset the interface and store prefs
 	[importFromClipboardTextView setString:@""];
 	[prefs setObject:[[importFormatPopup selectedItem] title] forKey:@"importFormatPopupValue"];
@@ -466,7 +451,9 @@
 			if (sqlModeToRestore) {
 				[mySQLConnection queryString:[NSString stringWithFormat:@"SET SQL_MODE=%@", [sqlModeToRestore tickQuotedString]]];
 			}
-			[self closeAndStopProgressSheet];
+			
+			[self _closeAndStopProgressSheet];
+			
 			SPOnewayAlertSheet(
 				SP_FILE_READ_ERROR_STRING,
 				[tableDocumentInstance parentWindow],
@@ -513,7 +500,8 @@
 					if (sqlModeToRestore) {
 						[mySQLConnection queryString:[NSString stringWithFormat:@"SET SQL_MODE=%@", [sqlModeToRestore tickQuotedString]]];
 					}
-					[self closeAndStopProgressSheet];
+					[self _closeAndStopProgressSheet];
+					
 					NSString *displayEncoding;
 					if (![importEncodingPopup indexOfSelectedItem]) {
 						displayEncoding = [NSString stringWithFormat:@"%@ - %@", [importEncodingPopup titleOfSelectedItem], [NSString localizedNameOfStringEncoding:sqlEncoding]];
@@ -555,12 +543,14 @@
 		// If not, check the connection if appropriate and then clean up and exit if appropriate.
 		if (![mySQLConnection isConnected] && ([mySQLConnection userTriggeredDisconnect] || ![mySQLConnection checkConnection])) {
 			if ([filename hasPrefix:SPImportClipboardTempFileNamePrefix]) [[NSFileManager defaultManager] removeItemAtPath:filename error:nil];
-			[self closeAndStopProgressSheet];
+			
+			[self _closeAndStopProgressSheet];
 			[errors appendString:NSLocalizedString(@"The connection to the server was lost during the import.  The import is only partially complete.", @"Connection lost during import error message")];
 			[self showErrorSheetWithMessage:errors];
 			[sqlParser release];
 			[sqlDataBuffer release];
 			[importPool drain];
+			
 			return;
 		}
 
@@ -702,7 +692,7 @@
 	if([filename hasPrefix:SPImportClipboardTempFileNamePrefix]) [[NSFileManager defaultManager] removeItemAtPath:filename error:nil];
 
 	// Close progress sheet
-	[self closeAndStopProgressSheet];
+	[self _closeAndStopProgressSheet];
 
 	// Display any errors
 	if ([errors length]) {
@@ -880,7 +870,7 @@
 
 		// Report file read errors, and bail
 		@catch (NSException *exception) {
-			[self closeAndStopProgressSheet];
+			[self _closeAndStopProgressSheet];
 			SPOnewayAlertSheet(
 				SP_FILE_READ_ERROR_STRING,
 				[tableDocumentInstance parentWindow],
@@ -924,7 +914,7 @@
 				// Try to generate a NSString with the resulting data
 				csvString = [[NSString alloc] initWithData:[csvDataBuffer subdataWithRange:NSMakeRange(dataBufferLastQueryEndPosition, dataBufferPosition - dataBufferLastQueryEndPosition)] encoding:csvEncoding];
 				if (!csvString) {
-					[self closeAndStopProgressSheet];
+					[self _closeAndStopProgressSheet];
 					SPMainQSync(^{
 						NSString *displayEncoding;
 						if (![importEncodingPopup indexOfSelectedItem]) {
@@ -983,7 +973,7 @@
 			if (!fieldMappingArray
 				&& ([parsedRows count] >= 100 || (!csvRowArray && allDataRead)))
 			{
-				[self closeAndStopProgressSheet];
+				[self _closeAndStopProgressSheet];
 				if (![self buildFieldMappingArrayWithData:parsedRows isPreview:!allDataRead ofSoureFile:filename]) {
 					[csvParser release];
 					[csvDataBuffer release];
@@ -1061,7 +1051,7 @@
 			// Before entering the following loop, check that we actually have a connection.
 			// If not, check the connection if appropriate and then clean up and exit if appropriate.
 			if (![mySQLConnection isConnected] && ([mySQLConnection userTriggeredDisconnect] || ![mySQLConnection checkConnection])) {
-				[self closeAndStopProgressSheet];
+				[self _closeAndStopProgressSheet];
 				[csvParser release];
 				[csvDataBuffer release];
 				[parsedRows release];
@@ -1235,7 +1225,7 @@
 		[[NSFileManager defaultManager] removeItemAtPath:filename error:nil];
 
 	// Close progress sheet
-	[self closeAndStopProgressSheet];
+	[self _closeAndStopProgressSheet];
 
 	// Display any errors
 	if ([errors length]) {
@@ -1287,7 +1277,7 @@
 
 	// Ensure data was provided, or alert than an import error occurred and return false.
 	if (![importData count]) {
-		[self closeAndStopProgressSheet];
+		[self _closeAndStopProgressSheet];
 		SPOnewayAlertSheet(
 			NSLocalizedString(@"Error", @"error"),
 			[tableDocumentInstance parentWindow],
@@ -1298,7 +1288,7 @@
 
 	// Sanity check the first row of the CSV to prevent hang loops caused by wrong line ending entry
 	if ([[importData objectAtIndex:0] count] > 512) {
-		[self closeAndStopProgressSheet];
+		[self _closeAndStopProgressSheet];
 		SPOnewayAlertSheet(
 			NSLocalizedString(@"Error", @"error"),
 			[tableDocumentInstance parentWindow],
@@ -1642,11 +1632,10 @@ cleanup:
 - (void)panelSelectionDidChange:(NSOpenPanel *)sender
 {
 	NSArray *selectedUrls = sender.URLs;
-	NSString *pathExtension;
-
 	// If a single file is selected and the extension is recognised, change the format dropdown automatically
 	if ( selectedUrls.count != 1 ) return;
-	pathExtension = [[selectedUrls[0] pathExtension] uppercaseString];
+	
+	NSString *pathExtension = [[selectedUrls[0] pathExtension] uppercaseString];
 
 	// If the file has an extension '.gz' or '.bz2' indicating gzip or bzip2 compression, fetch the next extension
 	if ([pathExtension isEqualToString:@"GZ"] || [pathExtension isEqualToString:@"BZ2"]) {
@@ -1661,9 +1650,12 @@ cleanup:
 	
 	if ([pathExtension isEqualToString:@"SQL"]) {
 		[importFormatPopup selectItemWithTitle:@"SQL"];
+		
 		[self changeFormat:self];
-	} else if ([pathExtension isEqualToString:@"CSV"] || [pathExtension isEqualToString:@"TSV"]) {
+	}
+	else if ([pathExtension isEqualToString:@"CSV"] || [pathExtension isEqualToString:@"TSV"]) {
 		[importFormatPopup selectItemWithTitle:@"CSV"];
+		
 		[self changeFormat:self];
 
 		// Set the cell delineator based on extension
@@ -1673,31 +1665,8 @@ cleanup:
 			[importFieldsTerminatedField setStringValue:@"\\t"];
 		}
 
-		// Try to detect the line endings using "file"
-		NSTask *fileTask = [[NSTask alloc] init];
-		NSPipe *filePipe = [[NSPipe alloc] init];
-
-		[fileTask setLaunchPath:@"/usr/bin/file"];
-		[fileTask setArguments:[NSArray arrayWithObjects:@"-L", @"-b", [selectedUrls[0] path], nil]];
-		[fileTask setStandardOutput:filePipe];
-		NSFileHandle *fileHandle = [filePipe fileHandleForReading];
-
-		[fileTask launch];
-
-		NSString *fileCheckOutput = [[NSString alloc] initWithData:[fileHandle readDataToEndOfFile] encoding:NSASCIIStringEncoding];
-		if (fileCheckOutput && [fileCheckOutput length]) {
-			NSString *lineEndingString = [fileCheckOutput stringByMatching:@"with ([A-Z]{2,4}) line terminators" capture:1L];
-			if (!lineEndingString && [fileCheckOutput isMatchedByRegex:@"text"]) lineEndingString = @"LF";
-			if (lineEndingString) {
-				if ([lineEndingString isEqualToString:@"LF"]) [importLinesTerminatedField setStringValue:@"\\n"];
-				else if ([lineEndingString isEqualToString:@"CR"]) [importLinesTerminatedField setStringValue:@"\\r"];
-				else if ([lineEndingString isEqualToString:@"CRLF"]) [importLinesTerminatedField setStringValue:@"\\r\\n"];
-			}
-		}
-		if (fileCheckOutput) [fileCheckOutput release];
-
-		[fileTask release];
-		[filePipe release];
+		NSString *lineEnding = [self _getLineEndingForFile:[selectedUrls[0] path]];
+		if (lineEnding) [importLinesTerminatedField setStringValue:lineEnding];
 	}
 }
 
@@ -1813,6 +1782,68 @@ cleanup:
 	if (fieldMappingTableColumnNames) SPClear(fieldMappingTableColumnNames);
 	if (fieldMappingTableDefaultValues) SPClear(fieldMappingTableDefaultValues);
 	if (fieldMapperOperator) SPClear(fieldMapperOperator);
+}
+/**
+ * Convenience method for closing and restoring the progress sheet to default state.
+ */
+- (void)_closeAndStopProgressSheet
+{
+	SPMainQSync(^{
+		[NSApp endSheet:singleProgressSheet];
+		[singleProgressBar setIndeterminate:YES];
+		[singleProgressSheet orderOut:nil];
+		[singleProgressBar stopAnimation:self];
+		[singleProgressBar setMaxValue:100];
+	});
+}
+
+/**
+ * Tries to determine the line endings of the specified file using the 'file' command.
+ */
+- (NSString *)_getLineEndingForFile:(NSString *)filePath
+{
+	NSString *lineEnding = nil;
+	
+	NSTask *fileTask = [[NSTask alloc] init];
+	NSPipe *filePipe = [[NSPipe alloc] init];
+	
+	[fileTask setLaunchPath:@"/usr/bin/file"];
+	[fileTask setArguments:[NSArray arrayWithObjects:@"-L", @"-b", filePath, nil]];
+	[fileTask setStandardOutput:filePipe];
+	
+	NSFileHandle *fileHandle = [filePipe fileHandleForReading];
+	
+	[fileTask launch];
+	
+	NSString *fileCheckOutput = [[NSString alloc] initWithData:[fileHandle readDataToEndOfFile] encoding:NSASCIIStringEncoding];
+	
+	if (fileCheckOutput && [fileCheckOutput length]) {
+		
+		NSString *lineEndingString = [fileCheckOutput stringByMatching:@"with ([A-Z]{2,4}) line terminators" capture:1L];
+		
+		if (!lineEndingString && [fileCheckOutput isMatchedByRegex:@"text"]) {
+			lineEndingString = @"LF";
+		}
+		
+		if (lineEndingString) {
+			if ([lineEndingString isEqualToString:@"LF"]) {
+				lineEnding = @"\\n";
+			}
+			else if ([lineEnding isEqualToString:@"CR"]){
+				lineEnding = @"\\r";
+			}
+			else if ([lineEnding isEqualToString:@"CRLF"]) {
+				lineEnding = @"\\r\\n";
+			}
+		}
+	}
+	
+	if (fileCheckOutput) [fileCheckOutput release];
+	
+	[fileTask release];
+	[filePipe release];
+	
+	return lineEnding;
 }
 
 #pragma mark -
