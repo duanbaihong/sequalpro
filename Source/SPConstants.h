@@ -118,7 +118,8 @@ typedef NS_ENUM(NSInteger, SPTableViewType)
 	SPTableViewStatus      = 3,
 	SPTableViewRelations   = 4,
 	SPTableViewTriggers    = 5,
-
+	APTableViewServerInfo  = 6,
+	
 	SPTableViewInvalid     = NSNotFound
 };
 

@@ -277,13 +277,13 @@ NSString *SPMainToolbarServerInfo               = @"SPMainToolbarServerInfoIdent
 NSString **SPViewModeToMainToolbarMap[] = 
 { 
 	nil, 
-	&SPMainToolbarTableStructure, 
-	&SPMainToolbarTableContent, 
-	&SPMainToolbarCustomQuery, 
-	&SPMainToolbarTableInfo, 
-	&SPMainToolbarTableRelations, 
-	&SPMainToolbarTableTriggers,
-	&SPMainToolbarServerInfo
+	&SPMainToolbarServerInfo,
+	&SPMainToolbarTableStructure,
+	&SPMainToolbarTableContent,
+	&SPMainToolbarCustomQuery,
+	&SPMainToolbarTableInfo,
+	&SPMainToolbarTableRelations,
+	&SPMainToolbarTableTriggers
 };
 
 // Preferences toolbar

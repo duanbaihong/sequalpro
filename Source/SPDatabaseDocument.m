@@ -4708,6 +4708,9 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 			case SPTableViewTriggers:
 				currentlySelectedViewName = @"SP_VIEW_TRIGGERS";
 				break;
+			case APTableViewServerInfo:
+				currentlySelectedViewName =@"SP_VIEW_SERVERINFO";
+				break;
 			default:
 				currentlySelectedViewName = @"SP_VIEW_STRUCTURE";
 		}
@@ -7178,18 +7181,21 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 	NSWindow *theParentWindow = [self parentWindow];
 
 	_isConnected = NO;
+	
+	[self parentTabDidClose];
 
+	
 	if ([[[self parentTabViewItem] tabView] numberOfTabViewItems] == 1) {
 		[theParentWindow orderOut:self];
 		[theParentWindow setAlphaValue:0.0f];
 		[theParentWindow performSelector:@selector(close) withObject:nil afterDelay:1.0];
+		
 	}
 	else {
 		[[[self parentTabViewItem] tabView] performSelector:@selector(removeTabViewItem:) withObject:[self parentTabViewItem] afterDelay:0.5];
 		[theParentWindow performSelector:@selector(makeKeyAndOrderFront:) withObject:nil afterDelay:0.6];
 	}
 
-	[self parentTabDidClose];
 #endif
 }
 
@@ -7677,5 +7683,15 @@ static int64_t SPDatabaseDocumentInstanceCounter = 0;
 	
 	[super dealloc];
 }
-
+- (IBAction)exitLoginDatabase:(id)sender
+{
+	if ([[[self parentTabViewItem] tabView] numberOfTabViewItems] == 1) {
+		[[parentWindow windowController] addNewConnection:self];
+	}
+	[self parentTabDidClose];
+	[self closeAndDisconnect];
+//	SPSSHTunnel *currentTunnel = [connectionController valueForKeyPath:@"sshTunnel"];
+//	[currentTunnel disconnect];
+	NSLog(@"退出成功！");
+}
 @end
