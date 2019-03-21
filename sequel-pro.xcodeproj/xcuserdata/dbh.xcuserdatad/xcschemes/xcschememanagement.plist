@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>Localize.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>PSMTabBar.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
+		</dict>
+		<key>PSMTabBar.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Sequel Pro (10.6 SDK).xcscheme_^#shared#^_</key>
 		<dict>
@@ -23,6 +33,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>8</integer>
+		</dict>
+		<key>Sequel Pro QLGenerator.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>Sequel Pro Release Build (10.6+).xcscheme_^#shared#^_</key>
 		<dict>
@@ -39,10 +54,20 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>SequelProTunnelAssistant.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>xibLocalizationPostprocessor.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>7</integer>
+		</dict>
+		<key>xibLocalizationPostprocessor.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 	</dict>
 </dict>
